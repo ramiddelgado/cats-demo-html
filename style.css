@@ -108,7 +108,12 @@ ul {
 /* Navigation */
 header {
     padding: 1.5em 0;
-    background-color: var(--c1--1--);
+    background-color: rgba(255, 255, 255, 0.95); /* Cambiado para ser apenas transparente */
+    backdrop-filter: blur(5px); /* Reducido el desenfoque */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 header .container {
@@ -532,6 +537,7 @@ h2 span {
     .toggleMenu.active {
         position: fixed;
         right: 5%;
+        top: 1.5em; /* para fijar la posición vertical */
         background-image: url(./imgs/close.svg);
         background-size: 25px;
         filter: invert(1);
@@ -543,7 +549,7 @@ h2 span {
         right: -100%;
         width: 300px;
         height: 100vh;
-        background: rgba(194, 87, 128, 0.9); /* Cambiado a un color semi-transparente */
+        background: rgba(194, 87, 128, 0.94); /* Cambiado a un color semi-transparente */
         backdrop-filter: blur(5px); /* Añadido efecto de desenfoque */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
@@ -626,6 +632,8 @@ h2 span {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 100%;
+        padding: 1em 1em;
     }
 
     .mobile-logo {
@@ -672,4 +680,6 @@ h2 span {
         max-height: 40px;
     } */
 }
+
+
 
