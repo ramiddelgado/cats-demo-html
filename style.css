@@ -109,8 +109,8 @@ ul {
 /* Navigation */
 header {
     padding: 1.5em 0;
-    background-color: rgba(255, 255, 255, 0.95); /* Cambiado para ser apenas transparente */
-    backdrop-filter: blur(5px); /* Reducido el desenfoque */
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     position: static;
     top: 0;
     z-index: 1000;
@@ -694,6 +694,12 @@ h2 span {
         align-items: center;
         max-width: 100%;
         padding: 1em 1em;
+        position: fixed;
+        top: 0;
+    }
+
+    body {
+        padding-top: 60px;
     }
 
     .marfelinos {
