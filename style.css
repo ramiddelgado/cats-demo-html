@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 *,
 *::after,
@@ -229,6 +230,16 @@ nav a:hover {
 
 /* Hero Section */
 
+.marfelinos {
+    /* font-family: 'DynaPuff', cursive; */
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    color: #86032f;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
 .hero {
     background: var(--linear--1--), url(./imgs/hero-bg.jpg);
     background-repeat: no-repeat;
@@ -251,7 +262,6 @@ nav a:hover {
     background-position: center;
 }
 
-/* Eliminar la clase .dark-mode .hero */
 
 .hero .flex {
     flex-wrap: wrap;
@@ -333,7 +343,7 @@ h2 span {
 
 .s-card {
     text-align: center;
-    border: none; /* Eliminamos el borde regular */
+    border: none;
     padding: 1em;
     box-shadow: var(--shadow--);
     border-radius: 50%;
@@ -343,7 +353,10 @@ h2 span {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    position: relative; /* Añadimos posición relativa */
+    position: relative;
+    animation: pulse 4s infinite;
+    z-index: 1;
+    border: 1.8px solid var(--c1--3--);
 }
 
 .s-card::before {
@@ -353,41 +366,88 @@ h2 span {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid var(--c1--3--);
-    border-radius: 50%;
-    animation: wobble 6s ease-in-out infinite;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    opacity: 0.7;
+    
 }
 
-@keyframes wobble {
-    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-    50% { border-radius: 50% 60% 30% 60% / 40% 50% 60% 70%; }
-    75% { border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%; }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.075);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-/* Nuevos estilos para los fondos de las cajas */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Nuevo efecto de reflejo brilloso */
+.s-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.3)20%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    transform: rotate(-45deg);
+    animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        top: -50%;
+        left: -50%;
+    }
+    100% {
+        top: 150%;
+        left: 150%;
+    }
+}
+
+/* Nuevos estilos para los fondos de las cajas con gradientes más pronunciados */
 .s-card:nth-child(1) {
-    background: linear-gradient(135deg, #ffb5b9 0%, #ffe5dc 100%);
+    background: linear-gradient(135deg, #fc949f 55%, #ffc1b6 80%);
 }
 
 .s-card:nth-child(2) {
-    background: linear-gradient(135deg, #c1d8ff 0%, #e2f2ff 100%);
+    background: linear-gradient(135deg, #8cb9fc 38%, #b4dafc 80%);
 }
 
 .s-card:nth-child(3) {
-    background: linear-gradient(135deg, #fff7e8 0%, #fdd7c4 100%);
+    background: linear-gradient(135deg, #f7ef86 55%, #ffaa7f 80%);
 }
 
 .s-card:nth-child(4) {
-    background: linear-gradient(135deg, #b4ffcf 0%, #b5e7ff 100%);
+    background: linear-gradient(135deg, #89fab4 55%, #7fe0ff 80%);
 }
 
 .s-card:nth-child(5) {
-    background: linear-gradient(135deg, #fae698 0%, #fdc2af 100%);
+    background: linear-gradient(135deg, #f792d0 55%, #ef9ef7 80%);
 }
 
 .s-card:nth-child(6) {
-    background: linear-gradient(135deg, #e4ffb5 0%, #b8f3c1 100%);
+    background: linear-gradient(135deg, #caf78f 55%, #80ffa0 80%);
 }
 
 .s-card:hover {
@@ -422,7 +482,7 @@ h2 span {
 .s-card h3 {
     padding-top: 0.5em;
     font-size: 16px;
-    color: #636363; /* Cambiamos el color del texto a un gris claro */
+    color: #705b68; /* Cambiamos el color del texto a un gris claro */
 }
 
 .service .flex {
@@ -547,7 +607,7 @@ h2 span {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 300px;
+        width: 285px;
         height: 100vh;
         background: rgba(194, 87, 128, 0.94); /* Cambiado a un color semi-transparente */
         backdrop-filter: blur(5px); /* Añadido efecto de desenfoque */
@@ -636,6 +696,10 @@ h2 span {
         padding: 1em 1em;
     }
 
+    .marfelinos {
+        font-size: 32px;
+    }
+
     .mobile-logo {
         display: block;
     }
@@ -651,6 +715,7 @@ h2 span {
     .hero-content p {
         padding-top: 0.6em;
     }
+    
 
     .hero-img {
         margin-top: -5em;
@@ -680,6 +745,9 @@ h2 span {
         max-height: 40px;
     } */
 }
+
+
+
 
 
 
