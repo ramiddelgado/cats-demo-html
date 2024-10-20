@@ -427,27 +427,27 @@ h2 span {
 
 /* Nuevos estilos para los fondos de las cajas con gradientes más pronunciados */
 .s-card:nth-child(1) {
-    background: linear-gradient(135deg, #fc949f 55%, #ffc1b6 80%);
+    background: linear-gradient(135deg, #fc949f 0%, #ffc1b6 50%, #fc949f 100%);
 }
 
 .s-card:nth-child(2) {
-    background: linear-gradient(135deg, #8cb9fc 38%, #b4dafc 80%);
+    background: linear-gradient(135deg, #8cb9fc 0%, #b4dafc 50%, #8cb9fc 100%);
 }
 
 .s-card:nth-child(3) {
-    background: linear-gradient(135deg, #f7ef86 55%, #ffaa7f 80%);
+    background: linear-gradient(135deg, #f7ef86 0%, #ffefa0 50%, #f7ef86 100%);
 }
 
 .s-card:nth-child(4) {
-    background: linear-gradient(135deg, #89fab4 55%, #7fe0ff 80%);
+    background: linear-gradient(135deg, #89fab4 0%, #b0ffd3 50%, #89fab4 100%);
 }
 
 .s-card:nth-child(5) {
-    background: linear-gradient(135deg, #f792d0 55%, #ef9ef7 80%);
+    background: linear-gradient(135deg, #f792d0 0%, #ffc0e6 50%, #f792d0 100%);
 }
 
 .s-card:nth-child(6) {
-    background: linear-gradient(135deg, #caf78f 55%, #80ffa0 80%);
+    background: linear-gradient(135deg, #caf78f 0%, #e5ffb5 50%, #caf78f 100%);
 }
 
 .s-card:hover {
