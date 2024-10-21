@@ -108,7 +108,7 @@ ul {
 
 /* Navigation */
 header {
-    padding: 1em 0;
+    padding: 0.5em 0;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     position: static;
@@ -242,8 +242,8 @@ nav a:hover {
 
 .hero {
     background: var(--linear--1--), url(./imgs/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
     background-position: center;
     position: relative; /* Añadimos posición relativa */
     padding-bottom: 100px; /* Añadimos espacio para las olas */
@@ -607,9 +607,9 @@ h2 span {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 285px;
+        width: 283px;
         height: 100vh;
-        background: rgba(194, 87, 128, 0.94); /* Cambiado a un color semi-transparente */
+        background: rgba(194, 87, 128, 0.97); /* Cambiado a un color semi-transparente */
         backdrop-filter: blur(5px); /* Añadido efecto de desenfoque */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
@@ -617,6 +617,7 @@ h2 span {
         align-items: center;
         justify-content: center;
         z-index: 1001;
+        border-left: 1px solid rgba(255, 255, 255, 0.6);
     }
 
     nav.active {
@@ -693,7 +694,7 @@ h2 span {
         justify-content: space-between;
         align-items: center;
         max-width: 100%;
-        padding: 1em 1em;
+        padding: 0.6em 1em;
         position: fixed;
         top: 0;
     }
@@ -727,11 +728,11 @@ h2 span {
     
 
     .hero-img {
-        margin-top: -5em;
+        margin-top: -3em;
     }
 
     .hero {
-        padding-bottom: 50px; /* Reducimos el padding en móviles */
+        padding-bottom: 60px; /* Reducimos el padding en móviles */
     }
 
     .hero::after {
