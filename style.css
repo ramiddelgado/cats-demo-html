@@ -346,7 +346,7 @@ h2 span {
     text-align: center;
     border: none;
     padding: 1em;
-    box-shadow: var(--shadow--);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     aspect-ratio: 1 / 1;
@@ -357,7 +357,8 @@ h2 span {
     position: relative;
     animation: pulse 4s infinite;
     z-index: 1;
-    border: 1.8px solid var(--c1--3--);
+    border: 2px solid #FFB6C1;
+    background: linear-gradient(135deg, #FFC0CB, #FFB6C1);
 }
 
 .s-card::before {
@@ -373,31 +374,23 @@ h2 span {
     margin: -5px;
     border-radius: inherit;
     opacity: 0.7;
-    
 }
 
 @keyframes pulse {
     0% {
         transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
     }
     50% {
-        transform: scale(1.075);
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 182, 193, 0.8);
     }
     100% {
         transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
     }
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Nuevo efecto de reflejo brilloso */
 .s-card::after {
     content: '';
     position: absolute;
@@ -407,7 +400,7 @@ h2 span {
     height: 200%;
     background: linear-gradient(
         to bottom right,
-        rgba(255, 255, 255, 0.3)20%,
+        rgba(255, 255, 255, 0.3) 20%,
         rgba(255, 255, 255, 0.05) 50%,
         rgba(255, 255, 255, 0) 60%
     );
@@ -426,34 +419,19 @@ h2 span {
     }
 }
 
-/* Nuevos estilos para los fondos de las cajas con gradientes más pronunciados */
-.s-card:nth-child(1) {
-    background: linear-gradient(135deg, #fc949f 0%, #facec7 50%, #fc949f 100%);
-}
-
-.s-card:nth-child(2) {
-    background: linear-gradient(135deg, #8cb9fc 0%, #cbe4fa 50%, #8cb9fc 100%);
-}
-
-.s-card:nth-child(3) {
-    background: linear-gradient(135deg, #f7ef86 0%, #faeeb5 50%, #f7ef86 100%);
-}
-
-.s-card:nth-child(4) {
-    background: linear-gradient(135deg, #89fab4 0%, #c8fcdf 50%, #89fab4 100%);
-}
-
-.s-card:nth-child(5) {
-    background: linear-gradient(135deg, #f792d0 0%, #ffc0e6 50%, #f792d0 100%);
-}
-
+/* Eliminamos los estilos individuales para cada .s-card */
+.s-card:nth-child(1),
+.s-card:nth-child(2),
+.s-card:nth-child(3),
+.s-card:nth-child(4),
+.s-card:nth-child(5),
 .s-card:nth-child(6) {
-    background: linear-gradient(135deg, #caf78f 0%, #e7fac3 50%, #caf78f 100%);
+    background: linear-gradient(135deg, #f8d0d7, #FFB6C1);
 }
 
 .s-card:hover {
     transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(255, 182, 193, 0.4);
 }
 
 .s-card img {
@@ -462,11 +440,14 @@ h2 span {
     object-fit: contain;
     transition: transform 0.3s ease;
     margin: 0 auto;
-    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(153deg) brightness(97%) contrast(90%); /* Cambiamos el filtro para un gris claro */
+    filter: brightness(0) saturate(100%) invert(20%) sepia(95%) saturate(2878%) hue-rotate(308deg) brightness(95%) contrast(97%);
 }
 
-.s-card:hover img {
-    transform: scale(1.1);
+.s-card h3 {
+    padding-top: 0.5em;
+    font-size: 16px;
+    color: #8B4B62;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .service-cards h3 {
@@ -483,7 +464,7 @@ h2 span {
 .s-card h3 {
     padding-top: 0.5em;
     font-size: 16px;
-    color: #705b68; /* Cambiamos el color del texto a un gris claro */
+    color: #4e474b; /* Cambiamos el color del texto a un gris claro */
 }
 
 .service .flex {
@@ -756,6 +737,8 @@ h2 span {
         max-height: 40px;
     } */
 }
+
+
 
 
 
