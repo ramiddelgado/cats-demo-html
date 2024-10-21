@@ -565,6 +565,14 @@ h2 span {
     padding: 4em 0 100px; /* Aumentamos el padding inferior para las olas */
     position: relative; /* Añadimos posición relativa */
     color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials > .page-btn {
+    margin-top: 2em;
+    margin-bottom: 4em;
 }
 
 .testimonials::after {
@@ -587,14 +595,26 @@ h2 span {
 }
 
 
-
-
 .testimonial-slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: 100%;
+    max-width: 1200px;
     gap: 2em;
     padding: 1em 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+}
+
+.testimonial-slider:active {
+    cursor: grabbing;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
 }
 
 .testimonial-card {
@@ -604,6 +624,12 @@ h2 span {
     padding: 2em;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .client-info {
@@ -617,6 +643,7 @@ h2 span {
     height: 60px;
     border-radius: 50%;
     margin-right: 1em;
+    object-fit: cover;
 }
 
 .client-details {
@@ -634,6 +661,31 @@ h2 span {
     color: #666;
     margin-top: 0.2em;
 }
+
+/* *puntitos de navegacion del slider */
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.slider-nav-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(194, 87, 128, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-nav-item.active {
+    background-color: var(--c1--3--);
+    transform: scale(1.2);
+}
+
+/* *Fin puntitos de navegacion del slider */
 
 /* Fin seccion testimonios */
 
@@ -656,6 +708,179 @@ h2 span {
 .page-btn svg {
     margin-left: auto;
 }
+
+/* *Carousel-Slider */
+
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    margin: 2em 0 1em 0;
+    
+}
+
+.carousel > div {
+    flex: 0 0 80%;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.carousel > div:nth-of-type(1) {
+    background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(2) {
+    background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(3) {
+    background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(4) {
+    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(5) {
+    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(6) {
+    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+}
+
+.carousel > div .content {
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.8) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: translatey(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    visibility: visible;
+}
+
+.carousel > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* *Fin Carousel-Slider */
+
+.service .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service .page-btn {
+    margin-bottom: 3em;
+    align-self: center;
+}
+
+
+/* !Footer */
+
+.footer {
+    background-color: var(--c1--2--);
+    color: var(--c1--1--);
+    padding: 2em 0;
+    position: relative;
+    margin-top: 5em;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.footer-logo img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+.footer-links a {
+    color: var(--c1--1--);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--c1--3--);
+}
+
+.footer-contact p {
+    margin: 0.5em 0;
+}
+
+.footer-bottom {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-icon {
+    color: var(--c1--1--);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    padding: 0 0.5em;
+}
+
+.social-icon:hover {
+    color: var(--c1--3--);
+}
+
+.icon {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+/* !Fin Footer */
+
+
 
 
 /* ! Media */
@@ -856,6 +1081,57 @@ h2 span {
     .testimonials::after {
         height: 50px; /* Reducimos la altura de las olas en móviles */
     }
+
+    /* *Footer */
+    .footer .container {
+        padding: 1em;
+    }
+
+    .footer-content {
+        gap: 1em;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .footer-links a {
+        font-size: 0.9em;
+    }
+
+    .footer-contact p {
+        font-size: 0.9em;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    
+    .social-icon {
+        color: var(--c1--1--);
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icon:hover {
+        color: var(--c1--3--);
+    }
+
+    .icon {
+        font-family: 'Font Awesome 6 Brands';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5em;
+    }
+    /* *Fin Footer */
 }
 
 
@@ -867,6 +1143,33 @@ h2 span {
 
     .client-info span {
         font-size: 1em;
+    }
+
+    .carousel {
+        height: 500px;
+    }
+
+    .carousel > div {
+        flex: 0 0 120px;
+        max-width: none;
+    }
+
+    .carousel > div .content {
+        opacity: 0;
+        transform: translatey(100%);
+        visibility: hidden;
+    }
+
+    .carousel > div:hover {
+        flex: 0 0 250px;
+        box-shadow: 1px 3px 15px #7645d8;
+        transform: translatey(-30px);
+    }
+
+    .carousel > div:hover .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
     }
 }
 
@@ -907,3 +1210,5 @@ h2 span {
 
 
 /* End media */
+
+

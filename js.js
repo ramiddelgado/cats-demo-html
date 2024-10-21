@@ -1,3 +1,66 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.testimonial-slider');
+    const navItems = document.querySelectorAll('.slider-nav-item');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Funciones para el arrastre del mouse
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        if (isDown) {
+            isDown = false;
+            slider.classList.remove('active');
+        }
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = x - startX; // La cantidad de desplazamiento
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Función para actualizar los puntos de navegación
+    function updateNavItems() {
+        const scrollPosition = slider.scrollLeft;
+        const cardWidth = slider.querySelector('.testimonial-card').offsetWidth;
+        const activeIndex = Math.round(scrollPosition / (cardWidth + 2)); // 32 es el gap entre tarjetas
+
+        navItems.forEach((item, index) => {
+            item.classList.toggle('active', index === activeIndex);
+        });
+    }
+
+    // Evento de scroll para actualizar los puntos de navegación
+    slider.addEventListener('scroll', updateNavItems);
+
+    // Navegación con los puntos
+    navItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            const cardWidth = slider.querySelector('.testimonial-card').offsetWidth;
+            slider.scrollTo({
+                left: index * (cardWidth + 32), // 32 es el gap entre tarjetas
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
+
 // Navigation
 function toggleMenu() {
     const toggleMenu = document.querySelector('.toggleMenu');
@@ -31,3 +94,7 @@ window.addEventListener('resize', function() {
     }
 });
 // End Navigation
+
+
+
+
