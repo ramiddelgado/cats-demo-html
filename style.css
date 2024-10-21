@@ -161,6 +161,7 @@ nav a {
     position: relative;
     padding: 5px 0;
     font-weight: 500;
+    color: #c25780;
 }
 
 nav a:hover {
