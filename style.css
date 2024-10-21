@@ -738,10 +738,17 @@ h2 span {
     } */
 }
 
+.page-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* ... otros estilos existentes ... */
+}
 
+.page-btn .fab {
+    font-size: 1.2em;
+}
 
-
-
-
-
-
+.page-btn svg {
+    margin-left: auto;
+}
