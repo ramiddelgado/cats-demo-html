@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <title>Mariana Catsitter</title>
     <script src="js.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- ! Inicio de la seccion NAVEGACION -->
@@ -31,7 +32,7 @@
      <!-- ! Inicio de la seccion HERO -->
      <section class="hero">
         <div class="row flex container">
-            <div class="hero-content">
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease" class="hero-content">
                 <span class="marfelinos">Mar Felinos</span>
                 <h1>Cuidamos a tu mascota con amor</h1>
                 <p>Viaja con tranquilidad sabiendo que tu mascota está en las mejores manos</p>
@@ -50,7 +51,7 @@
      <!-- ! Inicio de la seccion SERVICIOS -->
      <section class="service" id="service">
         <div class="container">
-            <h2><span>Nuestros</span> Servicios</h2>
+            <h2 data-aos="slide-down" data-aos-duration="1000"><span>Nuestros</span> Servicios</h2>
 
             <!-- *Carousel-Slider -->
             <div class="carousel">
@@ -105,7 +106,7 @@
 
 
             <div class="flex row">
-                <div class="service-img row">
+                <div data-aos="zoom-in" data-aos-duration="1000" class="service-img row">
                     <img src="./imgs/img8.png" alt="">
                     <a href="#" class="play row">
 
@@ -114,8 +115,8 @@
 
                 <div class="service-content row">
                     <div>
-                        <h2>Visita nuestra galeria</h2>
-                        <p>En los últimos años, hemos tenido el privilegio de cuidar a decenas de gatos, brindándoles amor, atención y cuidados especiales. Nuestra pasión por estos felinos se refleja en cada imagen de nuestra galería.</p>
+                        <h2 data-aos="slide-right" data-aos-duration="1000">Visita nuestra galeria</h2>
+                        <p>En los últimos 4 años, he tenido el privilegio de cuidar a decenas de gatos, brindándoles amor, atención y cuidados especiales. Mi pasión por estos felinos se refleja en todas estas fotos. Cada gatito tiene una personalidad única y son especiales a su manera. Entenderlos y aprender a cuidarlos es parte de mi trabajo y de las cosas que amo hacer.</p>
                         <a href="#" class="page-btn row">IR A GALERÍA
                             <svg fill="#fff" height="14px" width="14px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 viewBox="0 0 330 330" xml:space="preserve">
@@ -137,9 +138,9 @@
      <!-- ! Inicio de la seccion ACERCA DE NOSOTROS -->
      <section class="about row flex container" id="about">
         <div class="about-content">
-            <h2>Mi <span>historia</span></h2>
+            <h2 data-aos="slide-left" data-aos-duration="1000">Mi <span>historia</span></h2>
             <h3>Por mas de 3 años, dedicada al cuidado de gatos en la Ciudad de Córdoba.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vitae eum dolorem eos fuga. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officiis deleniti nobis voluptate doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dignissimos autem vero. Rem necessitatibus magnam doloribus! Modi temporibus, maiores ipsum voluptatum asperiores voluptates facilis, repellat dolorem tempora quisquam non molestias vitae quibusdam delectus sapiente vero. Consequatur, blanditiis saepe.</p>
+            <p>Me llamo Mariana y tengo 27 años. Soy una persona dedicada al cuidado de felinos en la ciudad de Córdoba, con una amplia experiencia adquirida con el tiempo. Mi trabajo en el ambito veterinario me llevo a desarrollar una pasion por los felinos a lo largo de los años, donde he desarrollado un profundo conocimiento sobre sus necesidades y cuidados específicos. Me caracterizo por mi alto nivel de responsabilidad y dedicación en cada aspecto de mi trabajo. Los tutores que confiaron en mi con mi trabajo pueden dar fé de ello.</p>
             <a href="#" class="page-btn row">CONOCE MAS
                 <svg fill="#fff" height="14px" width="14px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 330 330" xml:space="preserve">
@@ -159,7 +160,7 @@
      <!-- !Inicio de la sección de Testimonios -->
      <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>Lo que dicen nuestros clientes</h2>
+            <h2 data-aos="slide-up" data-aos-duration="1000">Lo que dicen nuestros clientes</h2>
             <div class="testimonial-slider">
                 <div class="testimonial-card">
                     <div class="client-info">
@@ -297,5 +298,11 @@
     </footer>
     <!-- !Fin de la sección de Footer -->
 
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
