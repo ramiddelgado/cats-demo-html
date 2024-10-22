@@ -300,12 +300,23 @@ p {
 }
 
 .hero-img {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(./imgs/acuarelas.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 350px;
-    
-    
+    opacity: 0.5; /* Ajustar este valor para cambiar la opacidad */
+    z-index: -1;
 }
 
 .hero-img img {
@@ -313,6 +324,8 @@ p {
     max-height: 320px;
     object-fit: contain;
     align-self: center;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -1258,6 +1271,7 @@ h2 span {
 .rating {
     color: #FFD700;
 }
+
 
 
 
