@@ -121,7 +121,7 @@ ul {
 header {
     padding: 0.5em 0;
     background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     position: static;
     top: 0;
     z-index: 1000;
@@ -725,7 +725,7 @@ h2 span {
 .carousel {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     height: 400px;
     gap: 10px;
     overflow-x: auto;
@@ -948,7 +948,6 @@ h2 span {
         width: 283px;
         height: 100vh;
         background: rgba(196, 103, 139, 0.97); /* Cambiado a un color semi-transparente */
-        backdrop-filter: blur(5px); /* Añadido efecto de desenfoque */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
         display: flex;
@@ -1156,12 +1155,17 @@ h2 span {
         font-style: normal;
         font-size: 1.5em;
     }
-    /* *Fin Footer */
+
+    .carousel {
+    justify-content: unset;
+    }
 }
+    /* *Fin Footer */
 
 
 /* Media query para tablets y desktop */
 @media screen and (min-width: 768px) {
+    
     .client-info h3 {
         font-size: 1.2em;
     }
@@ -1222,6 +1226,10 @@ h2 span {
     }
 }
 
+
+
+/* !End media */
+
 .testimonial-card p {
     margin-bottom: 1em;
     font-style: italic;
@@ -1234,6 +1242,5 @@ h2 span {
 
 
 
-/* End media */
 
 
