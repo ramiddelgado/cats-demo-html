@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *,
 *::after,
@@ -246,10 +247,11 @@ nav a:hover {
 
 .marfelinos {
     /* font-family: 'DynaPuff', cursive; */
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Lobster', cursive;
     font-size: 55px;
     color: #86032f;
-    font-weight: 600;
+    /* font-weight: 500; */
     letter-spacing: 1px;
 
 }
@@ -587,12 +589,16 @@ h2 span {
 }
 
 .about-img img {
-    width: 100%;
+    width: 90%;
     max-height: 500px;
+    /* filter: drop-shadow(-10px 10px #f0d6d6); */
     object-fit: cover;
+    border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%;
+    transition: all 0.3s ease;
+    /* object-fit: cover;
     border: 6px solid #9e9e9e;
     border-radius: 70% 30% 50% 70% / 60% 40% 80% 50%;
-    box-shadow: 0 0 15px rgba(145, 63, 104, 0.5);
+    box-shadow: 0 0 15px rgba(145, 63, 104, 0.5); */
 }
 
 /* End About Us */
@@ -1050,7 +1056,7 @@ h2 span {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     header.container {
         display: flex;
         justify-content: space-between;
@@ -1066,8 +1072,8 @@ h2 span {
     }
 
     .marfelinos {
-        font-size: 26px;
-        font-family: cursive;
+        font-size: 34px;
+        font-family: 'Lobster', cursive;
     }
 
 
@@ -1116,6 +1122,11 @@ h2 span {
     /* .mobile-logo img {
         max-height: 40px;
     } */
+
+    .about-img img {
+        box-shadow: -10px 10px 0 #f0d6d6;
+        border-radius: 30% 70% 70% 40% / 40% 30% 70% 70%;
+    }
 
     .rating {
         font-size: 1.2em;
@@ -1232,6 +1243,10 @@ h2 span {
         opacity: 1;
         transform: translatey(0%);
         visibility: visible;
+    }
+
+    .about-img img {
+        filter: drop-shadow(-10px 10px #f0d6d6);
     }
 }
 
