@@ -300,15 +300,17 @@ p {
 }
 
 .hero-img {
-    background-image: url(./imgs/bg.png);
+    background-image: url(./imgs/acuarelas.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 350px;
+    
+    
 }
 
 .hero-img img {
     width: 100%;
-    max-height: 350px;
+    max-height: 320px;
     object-fit: contain;
     align-self: center;
 }
