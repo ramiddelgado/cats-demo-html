@@ -725,7 +725,7 @@ h2 span {
 .carousel {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 400px;
     gap: 10px;
     overflow-x: auto;
