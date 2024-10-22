@@ -28,7 +28,7 @@ body {
     background: var(--c1--1--);
 }
 
-/* Eliminar la clase .dark-mode */
+
 
 img {
     max-width: 100%;
@@ -105,6 +105,17 @@ ul {
     max-width: 90%;
     margin: 0 auto;
 }
+
+.page-btn:hover svg {
+    fill: rgba(194, 87, 128, 0.97);
+    transition: fill 1s;
+    }
+
+    .page-btn:not(:hover) svg {
+    fill: #fff;
+    transition: fill 1s;
+}
+
 
 /* Navigation */
 header {
@@ -738,28 +749,28 @@ h2 span {
 }
 
 .carousel > div:nth-of-type(1) {
-    background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    background: url("./imgs/services-slider/arenero.jpg")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(2) {
-    background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    background: url("./imgs/services-slider/cepillado.jpg")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(3) {
-    background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-        no-repeat 50% / cover;
+    background: url("./imgs/services-slider/visitas.jpg")
+        no-repeat 50% 90% / cover;
 }
 .carousel > div:nth-of-type(4) {
-    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    background: url("./imgs/services-slider/juegos.jpg")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(5) {
-    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    background: url("./imgs/services-slider/fotos.jpg")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(6) {
-    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-        no-repeat 50% / cover;
+    background: url("./imgs/services-slider/medicamentos.jpg")
+        no-repeat 40% / cover;
 }
 
 .carousel > div .content {
@@ -767,6 +778,7 @@ h2 span {
     color: #fff;
     display: flex;
     align-items: center;
+    text-align:center;
     padding: 15px;
     opacity: 1;
     flex-direction: column;
@@ -774,12 +786,18 @@ h2 span {
     justify-content: flex-end;
     background: linear-gradient(
         0deg,
-        rgba(2, 2, 46, 0.8) 0%,
+        rgba(2, 2, 46, 0.8) 20%,
         rgba(255, 255, 255, 0) 100%
     );
     transform: translatey(0);
     transition: opacity 0.3s ease-in-out, transform 0.3s;
     visibility: visible;
+}
+
+.carousel > div .content h2 {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño para h2 */
+    margin-bottom: 0.5em; /* Espacio debajo del h2 */
+    line-height: normal; /* quitamos el clamp de los h2s anteriores*/
 }
 
 .carousel > div .content span {
@@ -854,6 +872,12 @@ h2 span {
     margin: 0.5em 0;
 }
 
+.footer-contact p span {
+    font-size: 0.9em;
+    color: #808080;
+    display:none;
+}
+
 .footer-bottom {
     margin-top: 2em;
     font-size: 0.9em;
@@ -923,7 +947,7 @@ h2 span {
         right: -100%;
         width: 283px;
         height: 100vh;
-        background: rgba(194, 87, 128, 0.97); /* Cambiado a un color semi-transparente */
+        background: rgba(196, 103, 139, 0.97); /* Cambiado a un color semi-transparente */
         backdrop-filter: blur(5px); /* Añadido efecto de desenfoque */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
@@ -1104,6 +1128,7 @@ h2 span {
     .footer-contact p {
         font-size: 0.9em;
     }
+
 
     .footer-bottom {
         font-size: 0.8em;
