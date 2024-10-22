@@ -551,7 +551,8 @@ h2 span {
     background-image: url(./imgs/coffee.png);
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 150px;;
+    background-size: 150px;
+    opacity: 0.8; /* Añadimos opacidad para bajar la transparencia */
 }
 
 .about-content h3 {
@@ -1170,6 +1171,11 @@ h2 span {
 
     .carousel {
     justify-content: unset;
+    }
+
+    .about-content {  /* ?Añadimos espacio para que el cafecito no se corte */
+    padding-bottom: 1.3em;
+            
     }
 }
     /* *Fin Footer */
