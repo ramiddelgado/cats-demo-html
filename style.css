@@ -995,7 +995,7 @@ h2 span {
         right: -100%;
         width: 50%;
         height: 100vh;
-        background: rgba(196, 103, 139, 0.97); /* Cambiado a un color semi-transparente */
+        background: linear-gradient(to bottom, rgba(216, 137, 157, 0.97), rgb(226, 196, 209, 0.97)); /* Degradado rosa a blanco con transparencia */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
         display: flex;
