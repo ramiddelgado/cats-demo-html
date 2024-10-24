@@ -1,7 +1,10 @@
+/* !FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* !FIN FUENTES */
 
+/* !GENERAL */
 *,
 *::after,
 *::before{
@@ -118,9 +121,9 @@ ul {
     fill: #fff;
     transition: fill 1s;
 }
+/* !FIN GENERAL */
 
-
-/* Navigation */
+/* !HEADER */
 header {
     padding: 0.5em 0;
     background-color: rgba(255, 255, 255, 0.95);
@@ -241,15 +244,11 @@ nav a:hover {
     color: var(--c1--3--);
     stroke: var(--c1--3--);
 }
-
 /* End Page Button */
+/* !FIN HEADER */
 
 
-/* End Navigation */
-
-
-/* Hero Section */
-
+/* !HERO-PORTADA */
 .marfelinos {
     /* font-family: 'DynaPuff', cursive; */
     /* font-family: 'Dancing Script', cursive; */
@@ -334,13 +333,10 @@ p {
     position: relative;
     z-index: 2;
 }
+/* !FIN HERO-PORTADA */
 
 
-/* End Hero Section */
-
-
-/* Service */
-
+/* !SERVICIOS */
 .service {
     background: var(--linear--2--);
     padding: 2em 0 100px; /* Aumentamos el padding inferior para las olas */
@@ -373,137 +369,7 @@ h2 span {
     border-bottom: 2.5px dotted var(--c1--3--);
 }
 
-.service-cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1em;
-    padding: 4em 0;
-}
 
-.s-card {
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    padding: 1em;
-    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
-    border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    animation: pulse 4s infinite;
-    z-index: 1;
-    border: 2px solid #FFB6C1;
-    background: linear-gradient(135deg, #FFC0CB, #FFB6C1);
-}
-
-.s-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(5px);
-    z-index: -1;
-    margin: -5px;
-    border-radius: inherit;
-    opacity: 0.7;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(255, 182, 193, 0.8);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
-    }
-}
-
-.s-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.3) 20%,
-        rgba(255, 255, 255, 0.05) 50%,
-        rgba(255, 255, 255, 0) 60%
-    );
-    transform: rotate(-45deg);
-    animation: shine 2.5s infinite;
-}
-
-@keyframes shine {
-    0% {
-        top: -50%;
-        left: -50%;
-    }
-    100% {
-        top: 150%;
-        left: 150%;
-    }
-}
-
-
-.s-card:nth-child(1),
-.s-card:nth-child(2),
-.s-card:nth-child(3),
-.s-card:nth-child(4),
-.s-card:nth-child(5),
-.s-card:nth-child(6) {
-    background: linear-gradient(135deg, #f8d0d7, #FFB6C1);
-}
-
-.s-card:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(255, 182, 193, 0.4);
-}
-
-.s-card img {
-    width: 60%;
-    max-height: 60px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    margin: 0 auto;
-    filter: brightness(0) saturate(100%) invert(20%) sepia(95%) saturate(2878%) hue-rotate(308deg) brightness(95%) contrast(97%);
-}
-
-.s-card h3 {
-    padding-top: 0.5em;
-    font-size: 16px;
-    color: #8B4B62;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-}
-
-.service-cards h3 {
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-
-.about-content h3 {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.s-card h3 {
-    padding-top: 0.5em;
-    font-size: 16px;
-    color: #4e474b; /* Cambiamos el color del texto a un gris claro */
-}
 
 .service .flex {
     padding-top: 2em;
@@ -558,11 +424,106 @@ h2 span {
     align-self: center;
 }
 
+/* *Carousel-Slider */
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    margin: 2em 0 1em 0;
+    
+}
 
-/* End Service */
+.carousel > div {
+    flex: 0 0 80%;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
 
-/* About Us */
+.carousel > div:nth-of-type(1) {
+    background: url("./imgs/services-slider/arenero.jpg")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(2) {
+    background: url("./imgs/services-slider/cepillado.jpg")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(3) {
+    background: url("./imgs/services-slider/visitas.jpg")
+        no-repeat 50% 90% / cover;
+}
+.carousel > div:nth-of-type(4) {
+    background: url("./imgs/services-slider/juegos.jpg")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(5) {
+    background: url("./imgs/services-slider/fotos.jpg")
+        no-repeat 50% / cover;
+}
+.carousel > div:nth-of-type(6) {
+    background: url("./imgs/services-slider/medicamentos.jpg")
+        no-repeat 40% / cover;
+}
 
+.carousel > div .content {
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align:center;
+    padding: 15px;
+    opacity: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.8) 20%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: translatey(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    visibility: visible;
+}
+
+.carousel > div .content h2 {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño para h2 */
+    margin-bottom: 0.5em; /* Espacio debajo del h2 */
+    line-height: normal; /* quitamos el clamp de los h2s anteriores*/
+}
+
+.carousel > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+/* *Fin Carousel-Slider */
+
+.service .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service .page-btn {
+    margin-bottom: 3em;
+    align-self: center;
+}
+/* !FIN SERVICIOS */
+
+
+/* !NOSOTROS */
 .about {
     flex-wrap: wrap-reverse;
     padding: 2em 0;
@@ -605,11 +566,10 @@ h2 span {
     border-radius: 70% 30% 50% 70% / 60% 40% 80% 50%;
     box-shadow: 0 0 15px rgba(145, 63, 104, 0.5); */
 }
+/* !FIN NOSOTROS */
 
-/* End About Us */
 
-/* Seccion testimonios */
-
+/* !TESTIMONIOS */
 .testimonials {
     background: var(--linear--2--);
     padding: 4em 0 100px; /* Aumentamos el padding inferior para las olas */
@@ -712,8 +672,17 @@ h2 span {
     margin-top: 0.2em;
 }
 
-/* *puntitos de navegacion del slider */
 
+.testimonial-card p {
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.rating {
+    color: #FFD700;
+}
+
+/* *puntitos de navegacion del slider */
 .slider-nav {
     display: flex;
     justify-content: center;
@@ -734,10 +703,9 @@ h2 span {
     background-color: var(--c1--3--);
     transform: scale(1.2);
 }
-
 /* *Fin puntitos de navegacion del slider */
+/* !FIN TESTIMONIOS */
 
-/* Fin seccion testimonios */
 
 .mobile-logo {
     display: none;
@@ -759,108 +727,8 @@ h2 span {
     margin-left: auto;
 }
 
-/* *Carousel-Slider */
 
-.carousel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 400px;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 20px 0;
-    scroll-snap-type: x mandatory;
-    margin: 2em 0 1em 0;
-    
-}
-
-.carousel > div {
-    flex: 0 0 80%;
-    max-width: 300px;
-    height: 100%;
-    border-radius: 0.5rem;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    box-shadow: 1px 5px 15px #1e0e3e;
-    position: relative;
-    overflow: hidden;
-    scroll-snap-align: center;
-}
-
-.carousel > div:nth-of-type(1) {
-    background: url("./imgs/services-slider/arenero.jpg")
-        no-repeat 50% / cover;
-}
-.carousel > div:nth-of-type(2) {
-    background: url("./imgs/services-slider/cepillado.jpg")
-        no-repeat 50% / cover;
-}
-.carousel > div:nth-of-type(3) {
-    background: url("./imgs/services-slider/visitas.jpg")
-        no-repeat 50% 90% / cover;
-}
-.carousel > div:nth-of-type(4) {
-    background: url("./imgs/services-slider/juegos.jpg")
-        no-repeat 50% / cover;
-}
-.carousel > div:nth-of-type(5) {
-    background: url("./imgs/services-slider/fotos.jpg")
-        no-repeat 50% / cover;
-}
-.carousel > div:nth-of-type(6) {
-    background: url("./imgs/services-slider/medicamentos.jpg")
-        no-repeat 40% / cover;
-}
-
-.carousel > div .content {
-    font-size: 1.2rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-align:center;
-    padding: 15px;
-    opacity: 1;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
-    background: linear-gradient(
-        0deg,
-        rgba(2, 2, 46, 0.8) 20%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: translatey(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s;
-    visibility: visible;
-}
-
-.carousel > div .content h2 {
-    font-size: 1.5rem; /* Tamaño de fuente más pequeño para h2 */
-    margin-bottom: 0.5em; /* Espacio debajo del h2 */
-    line-height: normal; /* quitamos el clamp de los h2s anteriores*/
-}
-
-.carousel > div .content span {
-    display: block;
-    margin-top: 5px;
-    font-size: 1rem;
-}
-
-/* *Fin Carousel-Slider */
-
-.service .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service .page-btn {
-    margin-bottom: 3em;
-    align-self: center;
-}
-
-
-/* !Footer */
-
+/* !FOOTER */
 .footer {
     background-color: var(--c1--2--);
     color: var(--c1--1--);
@@ -954,13 +822,12 @@ h2 span {
     display: inline-block;
     
 }
-
-/* !Fin Footer */
-
+/* !FIN FOOTER */
 
 
 
-/* ! Media */
+
+/* !MEDIAQUERIES */
 
 @media screen and (min-width: 1200px) {
     .container {
@@ -1337,16 +1204,8 @@ h2 span {
 
 
 
-/* !End media */
+/* !FIN MEDIAQUERIES */
 
-.testimonial-card p {
-    margin-bottom: 1em;
-    font-style: italic;
-}
-
-.rating {
-    color: #FFD700;
-}
 
 
 
