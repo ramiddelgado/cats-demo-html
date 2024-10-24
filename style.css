@@ -194,7 +194,7 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--c1--3--);
+    background: linear-gradient(to right, transparent, var(--c1--3--), transparent);
     transition: width 0.3s ease-in-out;
 }
 
@@ -867,6 +867,7 @@ h2 span {
     padding: 2em 0;
     position: relative;
     margin-top: 5em;
+    font-size: 0.9em;
 }
 
 .footer .container {
@@ -881,6 +882,7 @@ h2 span {
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
+    text-align: center;
 }
 
 .footer-logo img {
@@ -946,6 +948,11 @@ h2 span {
     font-weight: 900;
     margin-right: 10px;
     display: none; /* Oculto por defecto */
+}
+
+.footer-contact .icon-mobile {
+    display: inline-block;
+    
 }
 
 /* !Fin Footer */
@@ -1048,9 +1055,9 @@ h2 span {
     }
 
     nav a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Cambiado a un color más transparente */
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
         color: #ffffff;
-        transition: background-color 0.3s ease 0.1s;
+        transition: background 0.3s ease 0.1s;
     }
 
     .logo {
@@ -1083,7 +1090,7 @@ h2 span {
 
     .social-icon {
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(156, 156, 156, 0.1);
         padding: 0.5em 0.8em;
         margin: 0 0.2em;
     }
@@ -1222,8 +1229,8 @@ h2 span {
     }
 
 
-    .footer-bottom {
-        font-size: 0.8em;
+    .footer-bottom p{
+        font-size: 1em;
     }
 
     .footer-social {
