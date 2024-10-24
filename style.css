@@ -1,8 +1,7 @@
-/* !FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-/* !FIN FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
 
 /* !GENERAL */
 *,
@@ -26,6 +25,8 @@ body {
     --c1--3--: #c25780;
     --c1--4--: #ffe55e;
     --c1--5--: #faf6fa;
+
+    --texto--gris--: #4b4b4b;
     --linear--1--: linear-gradient(0deg, rgba(156, 53, 143, 0.1) 0%, rgba(168, 58, 153, 0) 100%);
     --linear--2--: linear-gradient(0deg, rgba(247, 68, 127, 0.2) 0%, rgba(168, 58, 153, 0) 100%);
     --linear--3--: linear-gradient(0deg, rgba(168, 58, 122, 0.1) 0%, rgba(168, 58, 168, 0) 100%);
@@ -826,8 +827,7 @@ h2 span {
 
 
 
-
-/* !MEDIAQUERIES */
+/* !MEDIAQUERIES PARA INDEX.HTML */
 
 @media screen and (min-width: 1200px) {
     .container {
@@ -1204,7 +1204,274 @@ h2 span {
 
 
 
-/* !FIN MEDIAQUERIES */
+/* !FIN MEDIAQUERIES PARA INDEX.HTML */
+/*todo --------------------- FIN DE INDEX.HTML --------------------- */
+
+
+/*todo ------------------------------------------------------------------- */
+/*todo --------------------- INICIO DE SERVICIOS.HTML--------------------- */
+/*todo ------------------------------------------------------------------- */
+:root {
+    --primary-color: #C25780;
+    --secondary-color: #f04c83;
+    --background-color: #f8f9fa;
+    --text-color: #4b4b4b;
+    --card-background: #ffffff;
+    --hover-color: #7209b7;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.container-pageservicios {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.header-servicios {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.container-pageservicios h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.container-pageservicios h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.container-pageservicios h1:hover::after {
+    width: 80%;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: var(--texto--gris--);
+    animation: fadeInUp 1s ease-out 0.3s both;
+    
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--card-background);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+    font-family: 'DynaPuff', cursive;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.service-description {
+    color: var(--texto--gris--);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+.cta h2 {
+    text-transform: none;
+}
+
+@keyframes shine {
+    from { transform: rotate(45deg) translateY(-100%); }
+    to { transform: rotate(45deg) translateY(100%); }
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta button {
+    display: inline-block;
+    background-color: white;
+    /* color: white; */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta button:link,
+.cta button:visited,
+.cta button:active {
+    color: black;
+    text-decoration: none;
+}
+
+
+.cta button a {
+    color: black;
+}
+
+.cta button:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+.cta button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+}
+
+.cta button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.container-pageservicios.button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container-pageservicios .button:hover {
+    /* background-color: var(--hover-color); */
+    color: black;
+    transform: scale(1.05);
+}
+
+.container-pageservicios .button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+}
+
+.container-pageservicios .button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+    .container-pageservicios {
+        padding: 2rem 0;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta {
+        padding: 2rem;
+    }
+
+    .intro {
+        text-align: justify;
+        margin: 0 1em 2em 1em;
+    }
+}
+
+/*todo ------------------------------------------------------------------- */
+/*todo --------------------- FIN DE SERVICIOS.HTML--------------------- */
+/*todo ------------------------------------------------------------------- */
 
 
 

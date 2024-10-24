@@ -98,3 +98,28 @@ window.addEventListener('resize', function() {
 
 
 
+// !PAGE SERVICIOS.HTML
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function animateOnScroll() {
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach((card, index) => {
+        if (isElementInViewport(card)) {
+            setTimeout(() => {
+                card.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`;
+            }, 100);
+        }
+    });
+}
+
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
