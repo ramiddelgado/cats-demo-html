@@ -1089,6 +1089,7 @@ h2 span {
 
     .footer-links a {
         font-size: 0.9em;
+        
     }
 
     .footer-contact p {
@@ -1220,6 +1221,18 @@ h2 span {
     --hover-color: #7209b7;
 }
 
+.body-servicios {
+    background-image: url(./hero-backgrounds/hero-bg-11.jpg);
+    opacity: 1;
+    background-size:contain;
+    background-position: center;
+    background-repeat:repeat;
+}
+
+.container-header-servicios {
+    max-width: 2950px;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1239,7 +1252,7 @@ h2 span {
 
 .container-pageservicios {
     width: 90%;
-    max-width: 1200px;
+    max-width: 2200px;
     margin: 0 auto;
     padding: 4rem 0;
 }
@@ -1291,13 +1304,53 @@ h2 span {
 }
 
 .service-card {
-    background-color: var(--card-background);
+    background-image: url(./imgs/services-slider/visitas.jpg);
     border-radius: 25px;
     padding: 2rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(122, 122, 122, 0.7), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+
+.service-card:nth-child(2) {
+    background-image: url(./imgs/services-slider/cepillado.jpg);
+}
+
+.service-card:nth-child(3) {
+    background-image: url(./imgs/services-slider/arenero.jpg);
+}
+
+.service-card:nth-child(4) {
+    background-image: url(./imgs/services-slider/juegos.jpg);
+}
+
+.service-card:nth-child(5) {
+    background-image: url(./imgs/services-slider/fotos.jpg);
+}
+.service-card:nth-child(6) {
+    background-image: url(./imgs/services-slider/medicamentos.jpg);
 }
 
 .service-card:hover {
@@ -1310,11 +1363,17 @@ h2 span {
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: pink;
+    border-bottom: 2px solid var(--secondary-color);
+    border-image: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0)) 1;
+    padding-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
 }
 
 .service-description {
-    color: var(--texto--gris--);
+    color: white;
 }
 
 .cta {
