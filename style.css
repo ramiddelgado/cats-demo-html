@@ -910,10 +910,15 @@ h2 span {
         border-bottom: 1px solid;
         border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
     }
+    
 
     nav ul li:last-child,
     nav .nav-footer {
         display:inline-block;
+    }
+
+    nav ul li:nth-child(3) {
+        border-bottom: none;;
     }
 
     
@@ -1000,6 +1005,11 @@ h2 span {
     nav ul li {
         text-align: start;
         margin-bottom: -1.5em;
+    }
+
+    nav ul li:nth-child(3) {
+        border-bottom: none;
+        display: none;
     }
 
     nav a {
