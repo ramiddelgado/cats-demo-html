@@ -1324,6 +1324,7 @@ h2 span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 .service-card {
@@ -1340,7 +1341,7 @@ h2 span {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    border: 3px solid rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 1);
 }
 
 .service-card::before {
@@ -1350,9 +1351,9 @@ h2 span {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(122, 122, 122, 0.7), rgba(0, 0, 0, 0.6));
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, rgba(41, 24, 30, 0.7), rgba(0, 0, 0, 0.7));
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     z-index: -1;
 }
 
@@ -1548,6 +1549,21 @@ h2 span {
     .intro {
         text-align: justify;
         margin: 0 1em 2em 1em;
+    }
+    .services-grid {
+        grid-template-columns: minmax(300px, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 }
 
