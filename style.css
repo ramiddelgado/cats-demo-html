@@ -378,7 +378,7 @@ h2 span {
 
 .service-img {
     position: relative;
-    background-image: url(./imgs/bg2.webp);
+    background-image: url(./imgs/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -642,7 +642,7 @@ h2 span {
 }
 
 .testimonial-card {
-    flex: 0 0 300px;
+    flex: 0 0 320px;
     background-color: #fff;
     border-radius: 35px;
     padding: 2em;
@@ -1093,6 +1093,10 @@ h2 span {
 
     .testimonials::after {
         height: 50px; /* Reducimos la altura de las olas en móviles */
+    }
+
+    .testimonial-card {
+        flex: 0 0 300px;
     }
 
     /* *Footer */
@@ -1812,12 +1816,12 @@ h2 span {
     cursor: pointer;
     transition: transform 0.3s ease;
     position: relative;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     background-color: #fff;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.1);
+    /* border: 20px solid rgba(0,0,0,0.1); */
 }
 .gallery-item:hover {
     transform: scale(1.05);
@@ -1830,12 +1834,26 @@ h2 span {
 }
 
 .gallery span {
-    display: flex;
-    justify-content: center;
-    color: var(--primary-color);
-    font-size: 1.2em;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.3em;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    /* font-family: 'Dynapuff', cursive; */
+    font-family:monospace;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+}
+
+.overlayporfoto {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
 }
 .lightbox {
     display: none;
