@@ -123,3 +123,6 @@ function animateOnScroll() {
 
 window.addEventListener('load', animateOnScroll);
 window.addEventListener('scroll', animateOnScroll);
+
+
+// !GOOGLE PLACES REVIEWS
