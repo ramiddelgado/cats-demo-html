@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Mar Felinos</title>
+    <script src="../js.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="body-servicios">
+
+    <!-- !Inicio de la sección NAVEGACION -->
+    <header class="container container-header-servicios">
+        <div class="toggleMenu" onclick="toggleMenu()"></div>
+        <a href="../index.html" class="logo mobile-logo"><img src="../imgs/logo.jpg" alt="Mariana Catsitter"></a>
+
+        <nav class="navigation row">
+            <ul class="row">
+                <li><a href="./sobremi.html"><span class="icon-mobile">&#xe537;</span> Sobre Mi</a></li>
+                <li><a href="./testimonios.html"><span class="icon-mobile">&#xf075;</span> Testimonios</a></li>
+                <li><a href="../index.html" class="logo desktop-logo"><img src="../imgs/logo.jpg" alt="Mariana Catsitter"></a></li>
+                <li><a href="./servicios.html"><span class="icon-mobile">&#xf1b0;</span> Servicios</a></li>
+                <li><a href="#"><span class="icon-mobile">&#xf03e;</span> Galería</a></li>
+                <li><a href="#"><span class="icon-mobile">&#xf059;</span> Preguntas frecuentes</a></li>
+            </ul>
+            <div class="nav-footer">
+                <div class="social-icons row">
+                    <a href="#" class="social-icon"><i class="icon">&#xf16d;</i></a>
+                    <a href="#" class="social-icon"><i class="icon">&#xf232;</i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- !Fin de la sección NAVEGACION -->
+
+    <!-- !Inicio MAIN -->
+
+    <div class="container-galeria">
+        <h1>Algunos de los michis</h1>
+        <div class="gallery" id="gallery">
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+1" alt="Gato 1">
+            <span>Gatito 1</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+2" alt="Gato 2">
+            <span>Gatito 2</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+3" alt="Gato 3">
+            <span>Gatito 3</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+4" alt="Gato 4">
+            <span>Gatito 4</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+5" alt="Gato 5">
+            <span>Gatito 5</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+6" alt="Gato 6">
+            <span>Gatito 6</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+7" alt="Gato 7">
+            <span>Gatito 7</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+8" alt="Gato 8">
+            <span>Gatito 8</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+9" alt="Gato 9">
+            <span>Gatito 9</span></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400?text=Gato+10" alt="Gato 10">
+            <span>Gatito 10</span></div>
+        </div>
+    </div>
+</div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox" id="closeLightbox">&times;</span>
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <button class="nav-button prev-button" id="prevButton">&lt;</button>
+            <button class="nav-button next-button" id="nextButton">&gt;</button>
+        </div>
+    </div>
+
+    <!-- !Fin MAIN -->
+
+    <!-- !Inicio footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../imgs/logo.jpg" alt="Mariana Catsitter">
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#about">Sobre nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <p><span class="icon-mobile">&#xf095;</span> +54 9 3513 89-9225 </p>
+                    <p><span class="icon-mobile">&#xf0e0;</span> mar.felinos.cba@gmail.com</p>
+                    <p><span class="icon-mobile">&#xf3c5;</span> Córdoba Capital</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" class="social-icon" rel="noopener">
+                        <span class="icon">&#xf16d;</span>
+                    </a>
+                    <a href="https://wa.me/tu_numero" target="_blank" class="social-icon" rel="noopener">
+                        <span class="icon">&#xf232;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 - Mar Felinos</p>
+            </div>
+        </div>
+    </footer>
+    <!-- !Fin de footer -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="../js.js"></script>
+</body>
+</html>

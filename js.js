@@ -5,6 +5,68 @@ document.addEventListener('DOMContentLoaded', function() {
     let startX;
     let scrollLeft;
 
+    // !INICIO DE GALERIA.HTML
+
+const gallery = document.getElementById('gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const closeLightbox = document.getElementById('closeLightbox');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+let currentIndex = 0;
+const images = Array.from(gallery.getElementsByTagName('img'));
+
+function openLightbox(index) {
+    currentIndex = index;
+    lightboxImage.src = images[currentIndex].src;
+    lightboxImage.alt = images[currentIndex].alt;
+    lightbox.style.display = 'flex';
+    updateNavButtons();
+}
+
+function closeLightboxFunc() {
+    lightbox.style.display = 'none';
+}
+
+function navigateImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    lightboxImage.src = images[currentIndex].src;
+    lightboxImage.alt = images[currentIndex].alt;
+    updateNavButtons();
+}
+
+function updateNavButtons() {
+    prevButton.style.display = currentIndex > 0 ? 'block' : 'none';
+    nextButton.style.display = currentIndex < images.length - 1 ? 'block' : 'none';
+}
+
+gallery.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+        const index = images.indexOf(e.target);
+        openLightbox(index);
+    }
+});
+
+closeLightbox.addEventListener('click', closeLightboxFunc);
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightboxFunc();
+});
+
+prevButton.addEventListener('click', () => navigateImage(-1));
+nextButton.addEventListener('click', () => navigateImage(1));
+
+document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') navigateImage(-1);
+        if (e.key === 'ArrowRight') navigateImage(1);
+        if (e.key === 'Escape') closeLightboxFunc();
+    }
+});
+
+// !FIN DE GALERIA.HTML
+
     // Funciones para el arrastre del mouse
     slider.addEventListener('mousedown', (e) => {
         isDown = true;
@@ -126,3 +188,5 @@ window.addEventListener('scroll', animateOnScroll);
 
 
 // !GOOGLE PLACES REVIEWS
+
+
