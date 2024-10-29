@@ -21,11 +21,22 @@ function openLightbox(index) {
     lightboxImage.src = images[currentIndex].src;
     lightboxImage.alt = images[currentIndex].alt;
     lightbox.style.display = 'flex';
+    
+    // Permitir que el DOM se actualice antes de añadir la clase active
+    requestAnimationFrame(() => {
+        lightbox.classList.add('active');
+    });
+    
     updateNavButtons();
 }
 
 function closeLightboxFunc() {
-    lightbox.style.display = 'none';
+    lightbox.classList.remove('active');
+    
+    // Esperar a que termine la transición antes de ocultar el lightbox
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+    }, 300); // 300ms = duración de la transición
 }
 
 function navigateImage(direction) {
