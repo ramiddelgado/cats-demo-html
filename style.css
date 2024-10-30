@@ -431,6 +431,10 @@ h2 span {
     background-size: 100px;
 }
 
+.service-content h2 {
+    color: var(--texto--gris--);
+}
+
 .service-content div {
     align-self: center;
 }
@@ -527,9 +531,14 @@ h2 span {
     align-items: center;
 }
 
+
 .service .page-btn {
     margin-bottom: 3em;
     align-self: center;
+}
+
+.service-h2 {
+    color: var(--texto--gris--);
 }
 /* !FIN SERVICIOS */
 
@@ -538,7 +547,7 @@ h2 span {
 .about {
     flex-wrap: wrap-reverse;
     padding: 2em 0;
-    color: #2b2b2b;
+    color: var(--texto--gris--);
 }
 
 .about-content {
@@ -551,10 +560,14 @@ h2 span {
 
 .about-content h3 {
     padding: 1em 0;
+    font-size: 1.1em;
 }
 
 .about-content h3+p {
-    padding: 0;
+    padding: 1em 0 2em 0;
+    font-size: 0.9em;
+    font-family: 'Laila';
+    font-style: italic;
 }
 
 .about-content .page-btn {
@@ -625,6 +638,7 @@ h2 span {
     text-align: center;
     margin-bottom: 1.1em;
     font-size: 4em;
+    color: var(--texto--gris--);
 }
 
 
@@ -1820,6 +1834,14 @@ h2 span {
     }
 }
 
+@media (min-width: 1024px) {
+    .container-sobremi h1 {
+        font-size: 3em;
+        background-size: 150px; 
+        padding: 40px 40px; 
+    }
+}
+
 /*todo ------------------------------------------------------------------- */
 /*todo --------------------- FIN DE SOBREMI.HTML--------------------- */
 /*todo ------------------------------------------------------------------- */
@@ -1895,8 +1917,9 @@ h2 span {
 
 .gallery span {
     position: absolute;
-    color: rgba(255, 255, 255, 0.8);
-    top: 90%;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 8px white;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 101;
@@ -1986,6 +2009,12 @@ h2 span {
     }
     .gallery-item img {
         height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-galeria h1 {
+        font-size: 3em;
     }
 }
 
