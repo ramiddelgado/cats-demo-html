@@ -1335,6 +1335,7 @@ h2 span {
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
+    font-family: 'DynaPuff';
 }
 
 .container-pageservicios h1::after {
@@ -1646,7 +1647,7 @@ h2 span {
     margin-bottom: 2em;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
-
+    font-family: 'DynaPuff';
     background-image: url('../imgs/catpaws.png');
     background-repeat: no-repeat;
     background-position: left;
@@ -1845,6 +1846,7 @@ h2 span {
     width: 70%;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
+    font-family: 'DynaPuff';
 }
 
 .container-galeria h1::after {
