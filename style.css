@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* !GENERAL */
 *,
@@ -250,25 +251,20 @@ nav a:hover {
 
 
 /* !HERO-PORTADA */
-.marfelinos {
-    /* font-family: 'DynaPuff', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    font-family: 'Lobster', cursive;
-    font-size: 55px;
-    color: #86032f;
-    /* font-weight: 500; */
-    letter-spacing: 1px;
 
-}
 
 .hero {
-    background: var(--linear--1--), url(./imgs/hero-bg.jpg);
+    /* background: var(--linear--1--), url(./imgs/hero-bg.jpg);
     background-repeat: repeat;
     background-size: contain;
     background-position: center;
+    color: #2b2b2b; */
+    background-image: url(./imgs/catfondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative; /* Añadimos posición relativa */
     padding-bottom: 100px; /* Añadimos espacio para las olas */
-    color: #2b2b2b;
 }
 
 .hero::after {
@@ -294,16 +290,30 @@ nav a:hover {
 .hero-content {
     align-self: center;
 }
+.h1-descripcion {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: var(--c1--3--);
+    letter-spacing: 1px;
+
+}
 
 h1 {
-    font-family: 'DynaPuff', cursive;
-    font-size: clamp(40px, 5vw, 70px);
+    font-family: 'Archivo Black';
+    font-size: clamp(40px, 5vw, 80px);
     line-height: clamp(45px, 5vw, 75px);
+    color: white;
 }
 
 p {
     font-size: 16px;
     padding: 1em 0;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    color: var(--texto--gris--);
+    max-width: 75%;
 }
 
 .hero-img {
@@ -311,7 +321,7 @@ p {
     z-index: 1;
 }
 
-.hero-img::before {
+/* .hero-img::before {
     content: '';
     position: absolute;
     top: 0;
@@ -322,7 +332,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 350px;
-    opacity: 0.5; /* Ajustar este valor para cambiar la opacidad */
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -333,7 +343,7 @@ p {
     align-self: center;
     position: relative;
     z-index: 2;
-}
+} */
 /* !FIN HERO-PORTADA */
 
 
@@ -1022,12 +1032,10 @@ h2 span {
         color: #ffffff;
     }
 
-    .marfelinos {
-        font-size: 34px;
-        font-family: 'Lobster', cursive;
+    .h1-descripcion {
+        font-size: 1.5em;
+        font-family: 'Dancing Script'
     }
-
-
 
     .mobile-logo {
         display: inline-block;
@@ -1038,11 +1046,26 @@ h2 span {
     }
 
     .hero-content {
-        align-self: flex-start;
+        align-self:center;
+    }
+
+    .hero-content h1 {
+        color: white;
+        font-size: 4em;
+        line-height: 0.8em;
     }
 
     .hero-content p {
         padding-top: 0.6em;
+        color: rgba(255, 255, 255, 1);
+        max-width: 85%;
+        text-align: start;
+        word-spacing: 1px;
+        letter-spacing: 0px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 0.8em;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
     }
     
 
@@ -1052,7 +1075,9 @@ h2 span {
 
     .hero {
         padding-bottom: 60px; /* Reducimos el padding en móviles */
+
     }
+    
 
     .hero::after {
         height: 50px; /* Reducimos la altura de las olas en móviles */
@@ -1237,6 +1262,14 @@ h2 span {
 
     .testimonial-card p {
         font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .hero {
+        background-position: -520px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
