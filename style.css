@@ -5,12 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 /* ! INICIO GENERAL */
 *,
 *::after,
 *::before{
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -30,7 +31,7 @@ body {
     --boton-rosa--: rgb(235, 107, 129);
 
     --texto--gris--: #3e3e3e;
-    --linear--1--: linear-gradient(0deg, rgba(156, 53, 143, 0.1) 0%, rgba(168, 58, 153, 0) 100%);
+    --linear--1--: linear-gradient(0deg, rgba(235, 38, 140, 0.1) 0%, rgba(168, 58, 153, 0) 100%);
     --linear--2--: linear-gradient(0deg, rgba(247, 68, 127, 0.3) 0%, rgba(168, 58, 153, 0) 100%);
     --linear--3--: linear-gradient(0deg, rgba(168, 58, 122, 0.1) 0%, rgba(168, 58, 168, 0) 100%);
     --shadow--: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
@@ -111,8 +112,8 @@ header .container {
 }
 
 .logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -171,7 +172,7 @@ nav .nav-footer {
 }
 
 nav a {
-    font-size: 16px;
+    font-size: 0.9em;
     text-transform: uppercase;
     position: relative;
     padding: 5px 0;
@@ -408,7 +409,7 @@ h2 span {
     background: linear-gradient(
         0deg,
         rgba(24, 3, 12, 0.9) 30%,
-        rgba(66, 35, 51, 0.2) 100%
+        rgba(66, 32, 50, 0.4) 100%
     );
     transform: translatey(0);
     transition: opacity 0.3s ease-in-out, transform 0.3s;
@@ -809,10 +810,18 @@ h2 span {
     font-size: 1.5em;
     transition: color 0.3s ease;
     padding: 0 0.5em;
+    opacity: 0.8;
 }
 
 .social-icon:hover {
-    color: var(--c1--3--);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.wsp {
+    background: linear-gradient(45deg, #25D366, #1bc6b2, #0b9c8b);
 }
 
 .icon {
@@ -922,7 +931,7 @@ h2 span {
     
 
     nav a {
-        font-size: 18px;
+        font-size: 0.9em;
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
@@ -974,7 +983,7 @@ h2 span {
     .social-icon {
         border-radius: 50%;
         background-color: rgba(156, 156, 156, 0.1);
-        padding: 0.5em 0.8em;
+        padding: 0.6em 0.8em;
         margin: 0 0.2em;
     }
 }
@@ -1011,7 +1020,6 @@ h2 span {
     }
 
     nav a {
-        font-size: 16px;
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
@@ -1050,7 +1058,7 @@ h2 span {
         text-align: start;
         word-spacing: 1px;
         letter-spacing: 0px;
-        font-family: 'Poppins';
+        /* font-family: 'Poppins'; */
         font-weight: 400;
         font-size: 0.9em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
@@ -1185,10 +1193,12 @@ h2 span {
         color: var(--c1--1--);
         font-size: 1.5em;
         transition: color 0.3s ease;
+        padding: 0.6em 0.8em;
+        opacity: 0.8;
     }
     
     .social-icon:hover {
-        color: var(--c1--3--);
+        color: rgba(255, 255, 255, 0.6);
     }
 
     .icon {
@@ -1300,8 +1310,7 @@ h2 span {
 
     .social-icon {
         border-radius: 50%;
-        background-color: rgba(156, 156, 156, 0.1);
-        padding: 0.5em 0.8em;
+        padding: 0.6em 0.8em;
         margin: 0 0.2em;
     }
 }
@@ -1721,6 +1730,11 @@ h2 span {
     padding: 2em;
     border-radius: 20px;
     margin-bottom: 3em;
+    font-family: 'Montserrat';
+}
+
+.about-section-sobremi .sobremi-p3, .sobremi-p4 {
+    padding: 0;
 }
 
 .about-text-sobremi {
@@ -1758,6 +1772,7 @@ h2 span {
 }
 
 .feature-card-sobremi {
+    font-size: 0.95em;
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.95) 0%,
@@ -1809,7 +1824,7 @@ h2 span {
 .container-sobremi h2 {
     text-align: center;
     color: var(--c1--3--);
-    margin-bottom: 1em;
+    margin-bottom: 0em;
 }
 
 .gallery-sobremi {
@@ -1833,19 +1848,38 @@ h2 span {
 @media (max-width: 768px) {
 
     .container-sobremi h1 {
-         margin-bottom: 1em;
+         margin-bottom: 0.5em;
          background-size: 90px;
          padding: 20px 20px;
          background-position: bottom left;
+    }
+
+    .container-sobremi p {
+        font-size: 0.95em;
     }
     .about-section-sobremi {
         flex-direction: column;
         padding: 1.5em;
     }
+    .about-text-sobremi h2 {
+        font-size: 1.4em;
+
+    }
 
     .about-text-sobremi {
         margin-top: 0;
+        font-size: 0.95em;
+        font-family: 'Montserrat';
     }
+    .about-section-sobremi .sobremi-p3 {
+        font-size: 0.95em;
+        font-family: 'Montserrat';
+    }
+    .about-section-sobremi .sobremi-p4 {
+        font-size: 0.95em;
+        font-family: 'Montserrat';
+    }
+
 
     .about-image-sobremi img {
         max-height: 400px;
@@ -1930,7 +1964,6 @@ h2 span {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    /* border: 20px solid rgba(0,0,0,0.1); */
 }
 .gallery-item:hover {
     transform: scale(1.05);
