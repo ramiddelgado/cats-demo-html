@@ -172,7 +172,7 @@ nav .nav-footer {
 }
 
 nav a {
-    font-size: 0.9em;
+    font-size: 0.85em;
     text-transform: uppercase;
     position: relative;
     padding: 5px 0;
@@ -931,7 +931,7 @@ h2 span {
     
 
     nav a {
-        font-size: 0.9em;
+        font-size: 0.85em;
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
@@ -1026,6 +1026,7 @@ h2 span {
         display: block;
         padding: 1em 0.5em;
         color: #ffffff;
+        font-size: 0.85em;
     }
 
     .h1-descripcion {
@@ -1341,9 +1342,6 @@ h2 span {
     --hover-color: #7209b7;
 }
 
-.body-servicios {
-    background-color: rgb(255, 246, 249);
-}
 
 .container-header-servicios {
     max-width: 2950px;
@@ -1408,7 +1406,7 @@ h2 span {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 3rem;
-    font-size: 1.1rem;
+    font-size: 1em;
     color: var(--texto--gris--);
     animation: fadeInUp 1s ease-out 0.3s both;
     
@@ -1419,80 +1417,10 @@ h2 span {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
-.service-card {
-    background-image: url(./imgs/services-slider/visitas.jpg);
-    border-radius: 25px;
-    padding: 2rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 1);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(41, 24, 30, 0.7), rgba(0, 0, 0, 0.7));
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    z-index: -1;
-}
-
-
-.service-card:nth-child(2) {
-    background-image: url(./imgs/services-slider/cepillado.jpg);
-}
-
-.service-card:nth-child(3) {
-    background-image: url(./imgs/services-slider/arenero.jpg);
-}
-
-.service-card:nth-child(4) {
-    background-image: url(./imgs/services-slider/juegos.jpg);
-}
-
-.service-card:nth-child(5) {
-    background-image: url(./imgs/services-slider/fotos.jpg);
-}
-.service-card:nth-child(6) {
-    background-image: url(./imgs/services-slider/medicamentos.jpg);
-}
-
-.service-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.service-title {
-    font-family: 'DynaPuff', cursive;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: pink;
-    border-bottom: 2px solid var(--secondary-color);
-    border-image: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0)) 1;
-    padding-bottom: 0.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 1;
-}
-
-.service-description {
-    color: white;
-}
 
 .cta {
     text-align: center;
@@ -1635,6 +1563,9 @@ h2 span {
     }
     .services-grid {
         grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .cta {
         padding: 2rem;
@@ -2441,3 +2372,99 @@ h2 span {
     transition: color 0.2s ease-in-out;
   }
   
+
+  /* ? service card nueva */
+  /* From Uiverse.io by FrM-bot */ 
+/* From uiverse.io by @FrM-bot */
+.scard {
+    width: 300px;
+    height: 400px;
+    transition: all .3s;
+    position: relative;
+    border-radius: .5rem 2rem;
+    box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scard:hover {
+    transform: scale(1.03);
+  }
+  
+  .scard .img {
+    transition: all .3s;
+    background-image: url(./imgs/services-slider/visitas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    
+    /* background: #fa46a3;
+    background: -webkit-linear-gradient(to right, #b33d7ca8, #f37fbb);
+    background: linear-gradient(to right, #9f1c62f3, #f875b9); */
+    width: 100%;
+    position: relative;
+  }
+
+  .img::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad media */
+    z-index: 0;
+}
+  
+  .scard .img:hover {
+    transform: scale(1.1);
+  }
+  
+  .scard .img-container {
+    display: grid;
+    border-radius: .5rem 2rem;
+    height: 340px;
+    overflow: hidden;
+  }
+  
+  .scard .description {
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    text-align: start;
+    padding: .5rem 1em;
+    width: 90%;
+    transition: all 0.5s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-backdrop-filter: blur(.1rem);
+    backdrop-filter: blur(.1rem);
+    background-color: rgba(213, 29, 109, 0.5);
+    border-radius: .5rem 2rem;
+  }
+  
+  .scard .description:hover {
+    transform: perspective(100px) translateX(7px) rotateX(3deg) rotateY(3deg) scale(1);
+    box-shadow: none;
+  }
+  
+  .scard .title {
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    padding-left: 1em;
+    font-family: 'DynaPuff';
+  }
+
+  .scard h3 {
+    color: white;
+    position: absolute;
+    text-align: start;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    font-family: 'Montserrat';
+  }
