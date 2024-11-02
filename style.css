@@ -289,7 +289,7 @@ nav a:hover {
 
 h1 {
     font-family: 'Archivo Black';
-    font-size: clamp(40px, 5vw, 80px);
+    font-size: clamp(40px, 4vw, 80px);
     line-height: clamp(45px, 4vw, 75px);
     color: white;
 }
@@ -334,9 +334,11 @@ p {
 h2,
 h2 span {
     font-family: 'DynaPuff', cursive;
-    font-size: clamp(25px, 5vw, 70px);
+    font-size: clamp(25px, 2vw, 70px);
     line-height: clamp(45px, 5vw, 75px);
     text-transform: capitalize;
+    color: var(--texto--gris--);
+    font-weight: 600;
 }
 
 h2 span {
@@ -609,8 +611,6 @@ h2 span {
 .testimonials h2 {
     text-align: center;
     margin-bottom: 1.1em;
-    font-size: 4em;
-    color: var(--texto--gris--);
 }
 
 
@@ -1135,10 +1135,6 @@ h2 span {
         font-size: 1.2em;
     }
 
-    .testimonials h2 {
-        font-size: 1.6em;
-    }
-
     .testimonials {
         padding-bottom: 50px; /* Reducimos el padding en móviles */
     }
@@ -1378,12 +1374,14 @@ h2 span {
 }
 
 .container-pageservicios h1 {
-    font-size: 3rem;
+    font-size: 2em;
     color: var(--primary-color);
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
     font-family: 'DynaPuff';
+    font-weight: 600;
+    width: 70%;
 }
 
 .container-pageservicios h1::after {
@@ -1623,6 +1621,8 @@ h2 span {
 }
 
 .container-sobremi h1 {
+    font-weight: 600;
+    font-size: 2.5em;
     text-align: center;
     color: var(--c1--3--);
     margin-bottom: 2em;
@@ -1676,9 +1676,10 @@ h2 span {
 .about-text-sobremi h2 {
     font-family: 'DynaPuff', cursive;
     color: var(--c1--3--);
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 0.5em;
     animation: fadeInUp 2s ease-out;
+    font-weight: 300;
 }
 
 .about-image-sobremi {
@@ -1783,6 +1784,7 @@ h2 span {
          background-size: 90px;
          padding: 20px 20px;
          background-position: bottom left;
+         font-size: 2em;
     }
 
     .container-sobremi p {
@@ -1828,7 +1830,7 @@ h2 span {
 
 @media (min-width: 1024px) {
     .container-sobremi h1 {
-        font-size: 3em;
+
         background-size: 150px; 
         padding: 40px 40px; 
     }
@@ -1856,11 +1858,13 @@ h2 span {
     margin: 0 auto;
     color: var(--c1--3--);
     margin-bottom: 1em;
-    padding-bottom: 0.2em;
     width: 70%;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
     font-family: 'DynaPuff';
+    font-size: 2em;
+    font-weight: 600;
+    width: 70%;
 }
 
 .container-galeria h1::after {
@@ -2005,11 +2009,6 @@ h2 span {
     }
 }
 
-@media (min-width: 1024px) {
-    .container-galeria h1 {
-        font-size: 3em;
-    }
-}
 
 
 /*todo ------------------------------------------------------------------- */
