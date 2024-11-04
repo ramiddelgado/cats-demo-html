@@ -424,6 +424,7 @@ h2 span {
     line-height: normal; /* quitamos el clamp de los h2s anteriores*/
     position: relative;
     padding-bottom: 0.3em;
+    color: white;
 }
 
 .carousel > div .content h2::after {
@@ -1458,6 +1459,7 @@ h2 span {
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+    color: white;
 }
 
 .cta p {
@@ -1908,7 +1910,7 @@ h2 span {
     height: 300px;
     object-fit: cover;
     display: block;
-    filter: blur(1px);
+    /* filter: blur(1px); */
 }
 
 .gallery span {
@@ -1927,14 +1929,6 @@ h2 span {
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent);
 }
 
-.overlayporfoto {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 100;
-    pointer-events: none;
-}
 .lightbox {
     display: none;
     position: fixed;
@@ -2033,6 +2027,7 @@ h2 span {
     height: min-content;
     overflow: hidden;
     padding: 96px 72px;
+    font-size: 0.9em;
 }
 
 .titulo-faq {
@@ -2049,6 +2044,8 @@ h2 span {
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
     font-family: 'DynaPuff';
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .titulo-faq h1::after {
@@ -2150,7 +2147,7 @@ h2 span {
 }
 
 .titulo-faq h1 {
-    font-size: 2.2em;
+    /* font-size: 2.2em; */
     color: var(--primary-color);
     font-family: 'DynaPuff';
 }
