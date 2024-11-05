@@ -250,10 +250,11 @@ nav a:hover {
     background-size: contain;
     background-position: center;
     color: #2b2b2b; */
-    background-image: url(./imgs/catfondo.png);
+    /* background-image: url(./imgs/catfondo.png); */
+    background-image: url(./imgs/hero-alargada-2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     position: relative; /* Añadimos posición relativa */
     padding-bottom: 100px; /* Añadimos espacio para las olas */
 }
@@ -1048,6 +1049,7 @@ h2 span {
 
     .hero-content {
         align-self: center;
+        margin-top: -30px;
     }
 
     .hero-content h1 {
@@ -1316,7 +1318,7 @@ h2 span {
 
 @media screen and (max-width: 432px) {
     .hero {
-        background-position: -520px;
+        background-position: -300px -25px;
         background-repeat: no-repeat;
         background-size: cover;
     }
