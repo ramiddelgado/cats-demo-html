@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
 
@@ -287,16 +289,10 @@ nav a:hover {
 .hero-content {
     align-self: center;
 }
-.h1-descripcion {
-    font-family: 'Lobster', cursive;
-    font-size: 1.8em;
-    color: var(--c1--3--);
-    letter-spacing: 1px;
-}
 
 h1 {
     font-family: 'DynaPuff';
-    font-size: clamp(40px, 3vw, 80px);
+    font-size: clamp(45px, 3.3vw, 80px);
     color: white;
     font-weight: 400;
 }
@@ -380,27 +376,27 @@ h2 span {
 }
 
 .carousel > div:nth-of-type(1) {
-    background: url("./imgs/services-slider/arenero.jpg")
+    background: url("./imgs/services-slider/arenero.webp")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(2) {
-    background: url("./imgs/services-slider/cepillado.jpg")
+    background: url("./imgs/services-slider/cepillado.webp")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(3) {
-    background: url("./imgs/services-slider/visitas.jpg")
+    background: url("./imgs/services-slider/visitas.webp")
         no-repeat 50% 90% / cover;
 }
 .carousel > div:nth-of-type(4) {
-    background: url("./imgs/services-slider/juegos.jpg")
+    background: url("./imgs/services-slider/juegos.webp")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(5) {
-    background: url("./imgs/services-slider/fotos.jpg")
+    background: url("./imgs/services-slider/fotos.webp")
         no-repeat 50% / cover;
 }
 .carousel > div:nth-of-type(6) {
-    background: url("./imgs/services-slider/medicamentos.jpg")
+    background: url("./imgs/services-slider/medicamentos.webp")
         no-repeat 40% / cover;
 }
 
@@ -1035,11 +1031,6 @@ h2 span {
         font-size: 0.9em;
     }
 
-    .h1-descripcion {
-        font-size: 1.5em;
-        font-family: 'Dancing Script';
-    }
-
     .mobile-logo {
         display: inline-block;
     }
@@ -1058,17 +1049,19 @@ h2 span {
         line-height: 1.2em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
         max-width: 90%;
+        
     }
 
     .hero-content p {
         padding-top: 0.6em;
-        color: rgba(255, 255, 255, 1);
-        max-width: 75%;
+        color: var(--c1--3--);
+        max-width: 85%;
         text-align: start;
         letter-spacing: 0px;
-        font-weight: 400;
-        font-size: 0.9em;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+        word-spacing: 0px;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+        font-size: 0.82em;
     }
     
 
