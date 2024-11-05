@@ -144,7 +144,6 @@ header .container {
 
 .logo:hover {
     transform: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Mantenemos la sombra original */
 }
 
 .logo::after {
@@ -183,7 +182,7 @@ nav .nav-footer {
 }
 
 nav a {
-    font-size: 0.9em;
+    font-size: 1em;
     /* text-transform: uppercase; */
     font-family: 'Poppins';
     position: relative;
@@ -553,6 +552,7 @@ h2 span {
     padding: 1em 0;
     font-size: 1em;
     color: var(--c1--3--);
+    font-weight: 600;
 }
 
 .about-content h3+p {
@@ -820,7 +820,7 @@ h2 span {
     color: var(--c1--1--);
     font-size: 1.5em;
     transition: color 0.3s ease;
-    padding: 0 0.5em;
+    padding: 0.5 0.5em;
     opacity: 0.8;
 }
 
@@ -839,7 +839,7 @@ h2 span {
     font-family: 'Font Awesome 6 Brands';
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .icon-mobile {
@@ -876,9 +876,9 @@ h2 span {
         background-image: url(./imgs/open.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 30px;
-        width: 30px;
-        height: 30px;
+        background-size: 25px;
+        width: 20px;
+        height: 25px;
         z-index: 1002;
         transition: background-size 0.3s ease-in-out;
     }
@@ -992,7 +992,7 @@ h2 span {
     .social-icon {
         border-radius: 50%;
         background-color: rgba(156, 156, 156, 0.1);
-        padding: 0.6em 0.8em;
+        padding: 0.2em 0.4em;
         margin: 0 0.2em;
     }
 }
@@ -1067,7 +1067,7 @@ h2 span {
         text-align: start;
         letter-spacing: 0px;
         font-weight: 400;
-        font-size: 0.95em;
+        font-size: 0.9em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
     }
     
@@ -1195,7 +1195,7 @@ h2 span {
         color: var(--c1--1--);
         font-size: 1.5em;
         transition: color 0.3s ease;
-        padding: 0.6em 0.8em;
+        padding: 0.3em 0.5em;
         opacity: 0.8;
     }
     
@@ -1207,7 +1207,7 @@ h2 span {
         font-family: 'Font Awesome 6 Brands';
         font-weight: 400;
         font-style: normal;
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     .carousel {
@@ -1268,18 +1268,10 @@ h2 span {
 
 @media screen and (min-width: 1024px) {
 
-    .testimonial-slider {
-        flex-direction: column;
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    .slider-nav{
-        display: none;
-    }
     .testimonial-card {
         padding: 2.5em;
-        margin: 0em 2em;
-        flex: 0 0 260px;
+        margin: 0em 0.5em;
+        flex: 0 0 300px;
     }
 
     .client-info img {
@@ -1312,7 +1304,7 @@ h2 span {
 
     .social-icon {
         border-radius: 50%;
-        padding: 0.6em 0.8em;
+        padding: 0.5em 0.7em;
         margin: 0 0.2em;
     }
 }
@@ -1855,7 +1847,7 @@ h2 span {
 
 
 .container-galeria {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 2em 1em;
 }
@@ -1890,7 +1882,7 @@ h2 span {
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px 30px;
     padding: 20px 0;
 }
@@ -1900,7 +1892,6 @@ h2 span {
     cursor: pointer;
     transition: transform 0.3s ease;
     position: relative;
-    border-radius: 15px;
     background-color: #fff;
     transition: all 0.3s ease;
     display: flex;
@@ -1914,7 +1905,6 @@ h2 span {
     height: 300px;
     object-fit: cover;
     display: block;
-    /* filter: blur(1px); */
 }
 
 .gallery span {
@@ -1951,6 +1941,7 @@ h2 span {
 .lightbox.active {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 1;
+    z-index: 9999;
 }
 
 .lightbox-content {
@@ -1978,7 +1969,7 @@ h2 span {
     top: -40px;
     right: 0;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 .nav-button {
@@ -2000,10 +1991,10 @@ h2 span {
 }
 @media (max-width: 600px) {
     .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     .gallery-item img {
-        height: 280px;
+        height: 300px;
     }
 }
 
