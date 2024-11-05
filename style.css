@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
 /* ! INICIO GENERAL */
 *,
 *::after,
@@ -292,7 +293,7 @@ h1 {
     font-size: clamp(40px, 3vw, 80px);
     /* line-height: clamp(45px, 4vw, 75px); */
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 p {
@@ -1051,7 +1052,6 @@ h2 span {
 
     .hero-content h1 {
         color: white;
-        font-size: 2.7em;
         line-height: 1.2em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
         max-width: 90%;
