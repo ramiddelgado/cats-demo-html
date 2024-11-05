@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let startX;
     let scrollLeft;
 
+
+// document.addEventListener('contextmenu', function(e) {
+//     e.preventDefault();
+// });
+
+
+// document.addEventListener('keydown', function(e) {
+//     if (e.key === 'F12') {
+//         e.preventDefault();
+//     }
+// });
+
     // !PAGE SERVICIOS.HTML
 
 function isElementInViewport(el) {
@@ -47,7 +59,7 @@ function toggleAnswer(element) {
     }
 }
 
-// Me aseguro de que el evento de clic esté configurado para cada pregunta
+
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {
     question.addEventListener('click', () => toggleAnswer(question));
@@ -215,6 +227,7 @@ window.addEventListener('resize', function() {
     }
 });
 // End Navigation
+
 
 
 

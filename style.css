@@ -104,6 +104,12 @@ header {
     width: 100%;
 }
 
+.realheader {
+    position:absolute;
+    background-color: transparent;
+    max-width: 100% !important;
+}
+
 header .container {
     display: flex;
     justify-content: center;
@@ -120,7 +126,7 @@ header .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0 2em;
     position: relative;
     transition: none;
@@ -139,6 +145,10 @@ header .container {
 .logo:hover {
     transform: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Mantenemos la sombra original */
+}
+
+.logo::after {
+    background: none;
 }
 
 nav {
@@ -173,16 +183,17 @@ nav .nav-footer {
 }
 
 nav a {
-    font-size: 0.85em;
-    text-transform: uppercase;
+    font-size: 0.9em;
+    /* text-transform: uppercase; */
+    font-family: 'Poppins';
     position: relative;
     padding: 5px 0;
     font-weight: 500;
-    color: #c25780;
+    color: rgb(152, 39, 84);
 }
 
 nav a:hover {
-    color: var(--c1--3--);
+    color: var(--secondary-color);
 }
 
 nav a::after {
@@ -192,7 +203,7 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--c1--3--), transparent);
+    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
     transition: width 0.3s ease-in-out;
 }
 
@@ -245,18 +256,13 @@ nav a:hover {
 
 /* !HERO-PORTADA */
 .hero {
-    /* background: var(--linear--1--), url(./imgs/hero-bg.jpg);
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: center;
-    color: #2b2b2b; */
-    /* background-image: url(./imgs/catfondo.png); */
-    background-image: url(./imgs/hero-alargada-2.png);
+
+    background-image: url(./imgs/hero-alargada-2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    position: relative; /* Añadimos posición relativa */
-    padding-bottom: 100px; /* Añadimos espacio para las olas */
+    position: relative;
+    padding-bottom: 100px; /* waves */
 }
 
 .hero::after {
@@ -265,7 +271,7 @@ nav a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Altura de las olas */
+    height: 100px; /* waves H */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
     background-size: cover;
     background-repeat: no-repeat;
@@ -292,7 +298,6 @@ nav a:hover {
 h1 {
     font-family: 'DynaPuff';
     font-size: clamp(40px, 3vw, 80px);
-    /* line-height: clamp(45px, 4vw, 75px); */
     color: white;
     font-weight: 400;
 }
@@ -317,7 +322,7 @@ p {
 /* !SERVICIOS */
 .service {
     background: var(--linear--2--);
-    padding: 2em 0 100px; /* padding inferior para las olas */
+    padding: 2em 0 100px; /* waves BP */
     position: relative;
 }
 
@@ -327,7 +332,7 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 140px; /* Altura de las olas */
+    height: 140px; /* waves H */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
     background-size: cover;
     background-repeat: no-repeat;
@@ -439,7 +444,7 @@ h2 span {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px; /* Ajusta el grosor del borde inferior */
+    height: 2px;
     background: linear-gradient(to right, transparent, pink, transparent);
 }
 
@@ -456,7 +461,7 @@ h2 span {
 
 .service-img {
     position: relative;
-    background-image: url(./imgs/bg2.jpg);
+    background-image: url(./imgs/bg2.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -470,7 +475,7 @@ h2 span {
     cursor: pointer;
     fill: var(--c1--1--);
     flex-direction: column;
-    background-image: url(./imgs/bg3.png);
+    background-image: url(./imgs/bg3.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -493,7 +498,7 @@ h2 span {
 }
 
 .service-content {
-    background-image: url(./imgs/paw.png);
+    background-image: url(./imgs/paw.webp);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 100px;
@@ -537,7 +542,7 @@ h2 span {
 }
 
 .about-content {
-    background-image: url(./imgs/coffee.png);
+    background-image: url(./imgs/coffee.webp);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 120px;
@@ -556,7 +561,7 @@ h2 span {
 }
 
 .about-content .page-btn {
-    margin-top: 2em; /* Añade espacio entre el texto y el botón */
+    margin-top: 2em;
 }
 
 .about-img {
@@ -589,8 +594,8 @@ h2 span {
 /* !TESTIMONIOS */
 .testimonials {
     background: var(--linear--2--);
-    padding: 4em 0 100px; /* Aumentamos el padding inferior para las olas */
-    position: relative; /* Añadimos posición relativa */
+    padding: 4em 0 100px;
+    position: relative; 
     color: #2b2b2b;
     display: flex;
     flex-direction: column;
@@ -608,7 +613,7 @@ h2 span {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 160px; /* Altura de las olas */
+    height: 160px; 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
     background-size: cover;
     background-repeat: no-repeat;
@@ -641,7 +646,7 @@ h2 span {
 }
 
 .testimonial-slider::-webkit-scrollbar {
-    display: none; /* Para Chrome, Safari y Opera */
+    display: none;
 }
 
 .testimonial-card {
@@ -733,7 +738,6 @@ h2 span {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    /* ... otros estilos existentes ... */
 }
 
 .page-btn .fab {
@@ -842,7 +846,7 @@ h2 span {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     margin-right: 10px;
-    display: none; /* Oculto por defecto */
+    display: none;
     font-style: normal;
 }
 
@@ -882,7 +886,7 @@ h2 span {
     .toggleMenu.active {
         position: fixed;
         right: 5%;
-        top: 1.5em; /* para fijar la posición vertical */
+        top: 1.5em;
         background-image: url(./imgs/close.svg);
         background-size: 25px;
         filter: invert(1);
@@ -896,7 +900,7 @@ h2 span {
         right: -100%;
         width: 50%;
         height: 100vh;
-        background: linear-gradient(to bottom, rgba(216, 137, 157, 0.97), rgb(226, 196, 209, 0.97)); /* Degradado rosa a blanco con transparencia */
+        background: linear-gradient(to bottom, rgba(216, 137, 147, 0.97), rgb(226, 196, 209, 0.97));
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease-in-out;
         display: flex;
@@ -1002,12 +1006,9 @@ h2 span {
         align-items: center;
         max-width: 100%;
         padding: 0.6em 1em;
-        position: fixed;
+        /* position: fixed; */
         top: 0;
-    }
-
-    body {
-        padding-top: 60px;
+        background-color: transparent;
     }
 
     nav {
@@ -1031,7 +1032,7 @@ h2 span {
         display: block;
         padding: 1em 0.5em;
         color: #ffffff;
-        font-size: 0.85em;
+        font-size: 0.9em;
     }
 
     .h1-descripcion {
@@ -1076,12 +1077,12 @@ h2 span {
     }
 
     .hero {
-        padding-bottom: 60px; /* reducir el padding en mobile */
+        padding-bottom: 60px;
     }
     
 
     .hero::after {
-        height: 50px; /* reducir altura de las olas en móviles */
+        height: 50px;
     }
 
     .service {
@@ -1089,7 +1090,7 @@ h2 span {
     }
 
     .service::after {
-        height: 50px; /* altura de las olas en mobile */
+        height: 50px;
     }
 
     .service-cards {
@@ -1140,11 +1141,11 @@ h2 span {
     }
 
     .testimonials {
-        padding-bottom: 50px; /* Reducimos el padding en móviles */
+        padding-bottom: 50px;
     }
 
     .testimonials::after {
-        height: 50px; /* Reducimos la altura de las olas en móviles */
+        height: 50px;
     }
 
     .testimonial-card {
@@ -1213,7 +1214,7 @@ h2 span {
     justify-content: unset;
     }
 
-    .about-content {  /* ?Añadimos espacio para que el cafecito no se corte */
+    .about-content { 
     padding-bottom: 1.3em;
             
     }
@@ -1264,7 +1265,7 @@ h2 span {
     }
 }
 
-/* Ajustes adicionales para desktop */
+
 @media screen and (min-width: 1024px) {
 
     .testimonial-slider {
@@ -1538,7 +1539,7 @@ h2 span {
 }
 
 .container-pageservicios .button:hover {
-    /* background-color: var(--hover-color); */
+
     color: black;
     transform: scale(1.05);
 }
@@ -1634,7 +1635,7 @@ h2 span {
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
     font-family: 'DynaPuff';
-    background-image: url('../imgs/catpaws.png');
+    background-image: url('../imgs/catpaws.webp');
     background-repeat: no-repeat;
     background-position: left;
     background-size: 200px; 
@@ -2118,8 +2119,8 @@ h2 span {
   }
 
   .faq-answer.show {
-    opacity: 1; /* Muestra la respuesta */
-    height: auto; /* Permite que la altura se ajuste al contenido */
+    opacity: 1; 
+    height: auto;
 }
 
 .faq-answer a,
@@ -2376,8 +2377,7 @@ h2 span {
   
 
   /* ? service card nueva */
-  /* From Uiverse.io by FrM-bot */ 
-/* From uiverse.io by @FrM-bot */
+
 .scard {
     width: 300px;
     height: 400px;
@@ -2399,9 +2399,6 @@ h2 span {
     background-repeat: no-repeat;
     opacity: 0.9;
     
-    /* background: #fa46a3;
-    background: -webkit-linear-gradient(to right, #b33d7ca8, #f37fbb);
-    background: linear-gradient(to right, #9f1c62f3, #f875b9); */
     width: 100%;
     position: relative;
   }
@@ -2413,7 +2410,7 @@ h2 span {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad media */
+    background-color: rgba(0, 0, 0, 0.6); 
     z-index: 0;
 }
   
