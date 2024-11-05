@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    if (document.querySelector('.faq-question')) {
+        initFaq();
+    }
     
     if (document.querySelector('.testimonial-slider')) {
         initTestimonials();
@@ -7,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('gallery')) {
         initGallery();
     }
+    
+
+    
 
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -21,7 +26,7 @@ document.addEventListener('keydown', function(e) {
 
     
 
-    // !PAGE SERVICIOS.HTML
+ // !PAGE SERVICIOS.HTML
 
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -48,26 +53,7 @@ window.addEventListener('load', animateOnScroll);
 window.addEventListener('scroll', animateOnScroll);
 
 
-// !FAQ DYNAMICS
-function toggleAnswer(element) {
-    const answer = element.nextElementSibling; // Obtiene la respuesta correspondiente
-    const question = element; // Guarda la referencia a la pregunta
 
-    // Alternar la visibilidad de la respuesta
-    if (answer.classList.contains('show')) {
-        answer.classList.remove('show'); // Oculta la respuesta
-        question.classList.remove('no-border'); // Elimina la clase para restaurar el borde
-    } else {
-        answer.classList.add('show'); // Muestra la respuesta
-        question.classList.add('no-border'); // Agrega la clase para eliminar el borde
-    }
-}
-
-
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => toggleAnswer(question));
-});
 
 
 });
@@ -257,5 +243,25 @@ function initTestimonials(){
 
 
 
+// !FAQ DYNAMICS
 
+    function toggleAnswer(element) {
+        const answer = element.nextElementSibling; // Obtiene la respuesta correspondiente
+        const question = element; // Guarda la referencia a la pregunta
+    
+        // Alternar la visibilidad de la respuesta
+        if (answer.classList.contains('show')) {
+            answer.classList.remove('show'); // Oculta la respuesta
+            question.classList.remove('no-border'); // Elimina la clase para restaurar el borde
+        } else {
+            answer.classList.add('show'); // Muestra la respuesta
+            question.classList.add('no-border'); // Agrega la clase para eliminar el borde
+        }
+    }
+    
+    
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => toggleAnswer(question));
+    });
 
