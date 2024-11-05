@@ -288,10 +288,11 @@ nav a:hover {
 }
 
 h1 {
-    font-family: 'Archivo Black';
-    font-size: clamp(40px, 4vw, 80px);
-    line-height: clamp(45px, 4vw, 75px);
+    font-family: 'DynaPuff';
+    font-size: clamp(40px, 3vw, 80px);
+    /* line-height: clamp(45px, 4vw, 75px); */
     color: white;
+    font-weight: 600;
 }
 
 p {
@@ -411,7 +412,7 @@ h2 span {
     background: linear-gradient(
         0deg,
         rgba(24, 3, 12, 0.9) 30%,
-        rgba(66, 32, 50, 0.4) 100%
+        rgba(66, 32, 50, 0.25) 100%
     );
     transform: translatey(0);
     transition: opacity 0.3s ease-in-out, transform 0.3s;
@@ -419,12 +420,15 @@ h2 span {
 }
 
 .carousel > div .content h2 {
-    font-size: 1.5rem; /* Tamaño de fuente más pequeño para h2 */
+    font-size: 0.85em; /* Tamaño de fuente más pequeño para h2 */
     margin-bottom: 0.5em; /* Espacio debajo del h2 */
     line-height: normal; /* quitamos el clamp de los h2s anteriores*/
     position: relative;
     padding-bottom: 0.3em;
     color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    
 }
 
 .carousel > div .content h2::after {
@@ -925,9 +929,7 @@ h2 span {
         display:inline-block;
     }
 
-    nav ul li:nth-child(3) {
-        border-bottom: none;;
-    }
+
 
     
 
@@ -1044,25 +1046,25 @@ h2 span {
     }
 
     .hero-content {
-        align-self:center;
+        align-self: center;
     }
 
     .hero-content h1 {
         color: white;
-        font-size: 4em;
-        line-height: 0.8em;
+        font-size: 2.7em;
+        line-height: 1.2em;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+        max-width: 90%;
     }
 
     .hero-content p {
         padding-top: 0.6em;
         color: rgba(255, 255, 255, 1);
-        max-width: 80%;
+        max-width: 75%;
         text-align: start;
-        word-spacing: 1px;
         letter-spacing: 0px;
-        /* font-family: 'Poppins'; */
         font-weight: 400;
-        font-size: 0.9em;
+        font-size: 0.95em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
     }
     
@@ -1073,7 +1075,6 @@ h2 span {
 
     .hero {
         padding-bottom: 60px; /* reducir el padding en mobile */
-
     }
     
 
@@ -1803,15 +1804,15 @@ h2 span {
 
     .about-text-sobremi {
         margin-top: 0;
-        font-size: 0.95em;
+        font-size: 0.9em;
         font-family: 'Montserrat';
     }
     .about-section-sobremi .sobremi-p3 {
-        font-size: 0.95em;
+        font-size: 0.85em;
         font-family: 'Montserrat';
     }
     .about-section-sobremi .sobremi-p4 {
-        font-size: 0.95em;
+        font-size: 0.85em;
         font-family: 'Montserrat';
     }
 
@@ -2200,6 +2201,7 @@ h2 span {
     border: none;
     outline: none;
     padding: 6px 18px;
+    /* margin-top: 1.5em; */
   }
   .button1::before,
   .button1::after {

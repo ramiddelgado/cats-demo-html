@@ -42,11 +42,11 @@
      <section class="hero">
         <div class="row flex container">
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease" class="hero-content">
-                <span class="h1-descripcion">Cuidamos tu mascota con amor</span>
-                <h1>MAR FELINOS</h1>
-                <p>Viaja con tranquilidad sabiendo que tu mascota está en las mejores manos.</p>
+                <!-- <span class="h1-descripcion">Cuidamos tu mascota con amor</span> -->
+                <h1 data-aos="fade-down-right" data-aos-duration="2000" data-aos-easing="ease">Cuidamos tu mascota con amor</h1>
+                <p data-aos="fade-up-left" data-aos-duration="2000" data-aos-easing="ease">Viaja con tranquilidad, tu mascota está en las mejores manos.</p>
                 <a href="https://wa.me/543513899225">
-                    <button type="button" class="button1">
+                    <button type="button" class="button1" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease">
                         <span class="fold"></span>
                     
                         <div class="points_wrapper">
@@ -164,7 +164,7 @@
         <div class="about-content" class="descripcion-galeria" data-aos="zoom-in" data-aos-duration="1000">
             <h2 data-aos="slide-left" data-aos-duration="1000">Mi <span>historia</span></h2>
             <h3 data-aos="slide-right" data-aos-duration="1000">Por mas de 4 años, dedicada al cuidado de gatos en la Ciudad de Córdoba.</h3>
-            <p>Me llamo Mariana y tengo 27 años. Soy una persona dedicada al cuidado de felinos en la ciudad de Córdoba, con una amplia experiencia adquirida con el tiempo. Mi trabajo en el ambito veterinario me llevo a desarrollar una pasión por los felinos a lo largo de los años, donde he desarrollado un profundo conocimiento sobre sus necesidades y cuidados específicos. Me caracterizo por mi alto nivel de responsabilidad y dedicación en cada aspecto de mi trabajo.</p>
+            <p data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease">Me llamo Mariana y tengo 27 años. Soy una persona dedicada al cuidado de felinos en la ciudad de Córdoba, con una amplia experiencia adquirida con el tiempo. Mi trabajo en el ambito veterinario me llevo a desarrollar una pasión por los felinos a lo largo de los años, donde he desarrollado un profundo conocimiento sobre sus necesidades y cuidados específicos. Me caracterizo por mi alto nivel de responsabilidad y dedicación en cada aspecto de mi trabajo.</p>
             <a href="./pages/sobremi.html" class="page-btn row">CONOCE MAS
                 <svg fill="#fff" height="14px" width="14px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 330 330" xml:space="preserve">
@@ -315,7 +315,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 - Mar Felinos</p>
+                <p>© Mar Felinos - 2024</p>
             </div>
         </div>
     </footer>
@@ -325,8 +325,10 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
-    </script>
+        AOS.init({
+          once: true, // Las animaciones se ejecutan solo una vez
+        });
+      </script>
 
   
 </body>
