@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
@@ -291,10 +292,10 @@ nav a:hover {
 }
 
 h1 {
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
     font-size: clamp(45px, 3.3vw, 80px);
     color: white;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 p {
@@ -336,12 +337,12 @@ p {
 
 h2,
 h2 span {
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Sour Gummy', cursive;
     font-size: clamp(25px, 2vw, 70px);
     line-height: clamp(45px, 5vw, 75px);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: var(--texto--gris--);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h2 span {
@@ -1008,7 +1009,7 @@ h2 span {
     }
 
     nav {
-        width: 75%;
+        width: 80%;
     }
 
     nav ul li {
@@ -1211,6 +1212,11 @@ h2 span {
     padding-bottom: 1.3em;
             
     }
+
+    .container-galeria h1 {
+    width: 100% !important;
+    font-size: 1.4em !important;
+    }
 }
     /* *Fin Footer */
 
@@ -1364,14 +1370,13 @@ h2 span {
 }
 
 .container-pageservicios h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     color: var(--primary-color);
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
     font-weight: 600;
-    width: 70%;
 }
 
 .container-pageservicios h1::after {
@@ -1549,7 +1554,13 @@ h2 span {
 @media (max-width: 768px) {
     .container-pageservicios {
         padding: 2rem 0;
+        font-size: 0.9em;
     }
+
+    .container-pageservicios h1 {
+        font-size: 1.6em;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         display: flex;
@@ -1563,6 +1574,7 @@ h2 span {
     .intro {
         text-align: justify;
         margin: 0 1em 2em 1em;
+        font-size: 0.9em;
     }
     .services-grid {
         grid-template-columns: minmax(300px, 1fr);
@@ -1619,7 +1631,7 @@ h2 span {
     margin-bottom: 2em;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
     background-image: url('../imgs/catpaws.webp');
     background-repeat: no-repeat;
     background-position: left;
@@ -1665,7 +1677,7 @@ h2 span {
 }
 
 .about-text-sobremi h2 {
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Sour Gummy', cursive;
     color: var(--c1--3--);
     font-size: 1.5em;
     margin-bottom: 0.5em;
@@ -1741,7 +1753,7 @@ h2 span {
 .feature-card-sobremi h3 {
     color: var(--c1--3--);
     margin-bottom: 0.5em;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Sour Gummy', cursive;
 }
 
 .container-sobremi h2 {
@@ -1775,7 +1787,7 @@ h2 span {
          background-size: 90px;
          padding: 20px 20px;
          background-position: bottom left;
-         font-size: 2em;
+         font-size: 1.6em;
     }
 
     .container-sobremi p {
@@ -1852,10 +1864,9 @@ h2 span {
     width: 70%;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
     font-size: 2em;
     font-weight: 600;
-    width: 70%;
 }
 
 .container-galeria h1::after {
@@ -2031,7 +2042,7 @@ h2 span {
     margin-bottom: 1em;
     position: relative;
     animation: slideFromTop 2s ease-out forwards;
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
     font-size: 2em;
     font-weight: 600;
 }
@@ -2135,9 +2146,9 @@ h2 span {
 }
 
 .titulo-faq h1 {
-    /* font-size: 2.2em; */
     color: var(--primary-color);
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
+    font-size: 1.6em;
 }
 
 .titulo-faq p {
@@ -2454,7 +2465,7 @@ h2 span {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     font-size: 1.2em;
     padding-left: 1em;
-    font-family: 'DynaPuff';
+    font-family: 'Sour Gummy';
   }
 
   .scard h3 {
