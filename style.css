@@ -1315,6 +1315,13 @@ h2 span {
         background-size: cover;
     }
 }
+@media screen and (max-width: 380px) {
+    .hero {
+        background-position: -260px -5px; /* Ajustado para 375px */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
 
 
 
