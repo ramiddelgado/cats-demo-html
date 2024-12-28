@@ -262,7 +262,7 @@ nav a:hover {
     background-size: cover;
     background-position: bottom;
     position: relative;
-    /* padding-bottom: 100px; */
+    padding-bottom: 100px; /* waves */
 }
 
 .hero::after {
@@ -1068,9 +1068,9 @@ h2 span {
         margin-top: -3em;
     }
 
-    /* .hero {
+    .hero {
         padding-bottom: 60px;
-    } */
+    }
     
 
     .hero::after {
@@ -1306,7 +1306,7 @@ h2 span {
     }
 }
 
-/* @media screen and (max-width: 432px) {
+@media screen and (max-width: 432px) {
     .hero {
         background-position: -300px -25px;
         background-repeat: no-repeat;
@@ -1319,7 +1319,7 @@ h2 span {
         background-repeat: no-repeat;
         background-size: cover;
     }
-} */
+}
 
 
 
