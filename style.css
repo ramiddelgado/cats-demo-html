@@ -1306,7 +1306,7 @@ h2 span {
     }
 }
 
-@media screen and (max-width: 432px) {
+/* @media screen and (max-width: 432px) {
     .hero {
         background-position: -300px -25px;
         background-repeat: no-repeat;
@@ -1319,7 +1319,7 @@ h2 span {
         background-repeat: no-repeat;
         background-size: cover;
     }
-}
+} */
 
 
 
